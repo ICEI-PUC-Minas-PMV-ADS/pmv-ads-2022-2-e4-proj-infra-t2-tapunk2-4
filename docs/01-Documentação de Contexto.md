@@ -22,7 +22,9 @@ O problema que esperamos resolver é a dificuldade de interação dos praticante
 Criar uma plataforma intuitiva que possibilite aos praticantes de Airsoft:
 
 •	Organizar encontros, eventos e torneios.
+
 •	Informações sobre Airsoft. 
+
 •	Interação entre os usuários, através da divisão de times.
 
 ## Justificativa
