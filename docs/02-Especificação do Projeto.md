@@ -46,7 +46,42 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 ![Restrições](img/restricoes.PNG)
 
+## Matriz de rastreabilidade dos requisitos
+
+A matriz de rastreabilidade dos requisitos serve para analisarmos as ligações do projeto, e com isso, avaliar e organizar as mudanças, gerenciando possíveis impactos. Por tanto, é essencial garantir o rastro entre os requisitos, os artefatos ligados aos requisitos, alinhando um ao outro, permitindo descobrir inconsistência no sistema, ajudando na gestão de riscos de forma rápida e simples. A tabela a seguir apresenta a matriz de rastreabilidade dos requisitos: 
+
+![Matriz](img/Matriz.png)
+
 ## Diagrama de Casos de Uso
 O diagrama contempla as principais ligações previstas entre casos de uso e atores e permite detalhar os Requisitos Funcionais identificados na etapa anterior.
 
 ![Diagrama de casos de uso](img/diagrama_casos_uso.PNG)
+
+## Planejamento do cronograma 
+
+Nessa parte, mostraremos processo envolvendo gestão financeira do Projeto. Planejamento do Gerenciamento de custo, Estimativa de custo, Determinação do Orçamento e Controle dos custos. A parte mais significativa é Recursos Humanos onde foi calculado o valor de horas estimadas do projeto multiplicado por 30 Reais a hora. Cobrado também o valor de 40% de Serviços onde inclui a despesa e o lucro do executor. 
+
+![Cronograma](img/Cronograma.png)
+![Cadastro de Atividades e estimativas do tempo de duração](img/CadastroAtividades.png)
+![Gráfico de Gantt](img/GraficoGantt.png)
+
+## Indicadores de Desempenho
+
+A tabela mostra cinco indicadores de desempenho criados a partir de métricas simples, porém planejados a partir de metas e objetivos SMART´s para o presente projeto. Específicos, mensuráveis, atingíveis, relevantes e temporais.
+
+![Tabela de indicadores de desempenho](img/TabelaIndicadores.png)
+
+## Gráficos de Indicadores de Desempenho
+
+As figuras a seguir mostram os gráficos que compreendem a tabela de indicadores de desempenho em um cenário hipotético.
+
+![Gráfico Indicador de desempenho](img/GraficoIndicador.png)
+![Gráfico Indicador de desempenho](img/GraficoIndicador1.png)
+
+## Modelagem de Processos
+
+A modelagem de processos permite de forma visual compreender melhor os processos de negócio de uma organização, seus principais objetivos são analisar, documentar e mapear esses processos, pode ter como meta a melhora da qualidade do produto, redução de custos, automação, entre outros. A metodologia utilizada na modelagem de processos foi a BPMN – Business Process Model and Notation.
+
+![Modelagem de Processos](img/ModelagemProcessos.png)
+![Modelagem de Processos](img/ModelagemProcessos1.png)
+
