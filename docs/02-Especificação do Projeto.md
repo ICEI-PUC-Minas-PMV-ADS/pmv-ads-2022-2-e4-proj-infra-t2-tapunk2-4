@@ -35,21 +35,21 @@ O escopo funcional do projeto é definido por meio dos requisitos funcionais que
 ### Requisitos Funcionais
 A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
 
-![requisitos_Funcionais](img/requisitos_func.PNG)
+![requisitos_Funcionais](img/requisitos_func.png)
 
 
 
 ### Requisitos não Funcionais
 A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá atender.
 
-![requisitos_N_Funcionais](img/requisitos_nao_func.PNG)
+![requisitos_N_Funcionais](img/requisitos_nao_func.png)
 
 
 
 ## Restrições
 As questões que limitam a execução desse projeto e que se configuram como obrigações claras para o desenvolvimento do projeto em questão são apresentadas na tabela a seguir.
 
-![restricoes](img/restricoes.PNG)
+![restricoes](img/restricoes.png)
 
 
 
@@ -63,8 +63,6 @@ A matriz de rastreabilidade dos requisitos serve para analisarmos as ligações 
 
 ## Diagrama de Casos de Uso
 O diagrama contempla as principais ligações previstas entre casos de uso e atores e permite detalhar os Requisitos Funcionais identificados na etapa anterior.
-
-![caso_de_uso](https://user-images.githubusercontent.com/81584300/189507080-169a239b-ac82-482a-ae8e-a4b290252edd.png)
 
 ![caso_de_uso_Usuario](https://user-images.githubusercontent.com/81584300/189507096-350099ea-baff-41f4-a9ed-9e9da8daa949.png)
 
@@ -87,8 +85,9 @@ Nessa parte, mostraremos processo envolvendo gestão financeira do Projeto. Plan
 
 A modelagem de processos permite de forma visual compreender melhor os processos de negócio de uma organização, seus principais objetivos são analisar, documentar e mapear esses processos, pode ter como meta a melhora da qualidade do produto, redução de custos, automação, entre outros. A metodologia utilizada na modelagem de processos foi a BPMN – Business Process Model and Notation.
 
-![modelagem_Processos](https://user-images.githubusercontent.com/81584300/189506843-dbe56cf8-86c9-401b-a29d-12a66ccf788a.png)
+![modelagem_Processos](img/modelagem1.png)
 
-![modelagem_Processos_Sistema](https://user-images.githubusercontent.com/81584300/189506847-b4dec612-13be-45a7-860b-3ec599b95a40.png)
+![modelagem_Processos](img/modelagem2.png)
 
+![modelagem_Processos](img/modelagem3.png)
 
