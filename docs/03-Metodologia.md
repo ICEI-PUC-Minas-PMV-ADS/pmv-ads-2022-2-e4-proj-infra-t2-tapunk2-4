@@ -15,35 +15,25 @@ Os artefatos do projeto são criados com base nas diversas plataformas e a conex
 |Gerenciamento do Projeto         | [Trello](https://trello.com/b/0rasISVx/airsoft)                                               | 
 
 
-## Gerenciamento de Projeto
+## Gerenciamento de código fonte
 
 Optamos por utilizar o Git Flow para a gestão do código fonte do software desenvolvido pelo grupo. Desta maneira, conseguimos manter o controle do que está sendo produzido pela equipe, pois a manutenção pode ser realizada em branch, onde, ao mesmo tempo são corrigidas as falhas, implementando novas funcionalidades e total controle da funcionalidade do código. 
 
-![Personas](img/git_flow.PNG)
+![gerenciamento_projeto](https://user-images.githubusercontent.com/81584300/189507395-420194e9-d556-42a6-b725-939d1a36a32e.png)
+
     
 ## Gerenciamento de Projeto
 
 O grupo irá utilizar o Scrum, pois tem uma gestão ágil de desenvolvimento de software, onde o projeto pode ser divido em ciclos. Com isso, conseguimos planejar o tempo que levamos para finalizar cada etapa do projeto de modo produtivo e eficaz, diminuindo o impacto das alterações no fluxo do processo alcançando os objetivos definidos durante a etapa de planejamento.
 
-A equipe está organizada da seguinte maneira:
+### A equipe está organizada da seguinte maneira:
 
-•	Scrum Master: Thais Soares Alves da Silva
-
-•	Product Owner: Douglas Macedo da Silva
-
-•	Equipe de Design: Rodrigo Charles Oliveira
-
-•	Equipe de Desenvolvimento:
-
-o	Pablo Djorkaeff
-
-o	Tatiany Belém dos Santos
-
-o	Lídia Frossard
+![gerenciamento_codigo](https://user-images.githubusercontent.com/81584300/189507430-2f45df10-4743-4cb4-95ed-dcd9a5720a94.png)
 
 
 
-Com a finalidade de organizar e distribuir as tarefas do projeto, a equipe está utilizando o Trello estruturado com as seguintes listas:
+### Com a finalidade de organizar e distribuir as tarefas do projeto, a equipe está utilizando o Trello estruturado com as seguintes listas:
+
 
 •	Backlog: Recebe as tarefas a serem trabalhadas e todas as atividades identificadas no decorrer do projeto devem ser inclusas a esta lista.
 
@@ -57,8 +47,10 @@ Com a finalidade de organizar e distribuir as tarefas do projeto, a equipe está
 
 •	Locked: Quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está travando a tarefa.
 
-O quadro kanban do grupo no Trello está disponível através da URL https://trello.com/b/0rasISVx/airsoft e é apresentado no estado atual a seguir:
 
-![Personas](img/kanban_trello.PNG)
+### O quadro kanban do grupo no Trello está disponível através da URL https://trello.com/b/0rasISVx/airsoft e é apresentado no estado atual a seguir:
+
+![trello](https://user-images.githubusercontent.com/81584300/189507458-fb772ad9-bc80-4874-8b7e-d59e2aac7992.png)
+
 
 
