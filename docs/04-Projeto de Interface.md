@@ -28,31 +28,39 @@ Conforme fluxo de telas do projeto, apresentado no item anterior, as telas do si
 
 A tela de home-Page com base na estrutura padrão, o Main traz a possiblidade de criar eventos e adicionar equipes e em destaque observaremos três equipes de acordo com o ranking nacional. 
 
- 
+![Tela Home Page](img/home_page.png)
+
 ### Tela – Entrar
 Na tela de login o usuário poderá acessar uma área privada através do e-mail e senha, tendo a possibilidade de se cadastrar caso seja um usuário novo e solicitar nova senha caso tenha esquecido a mesma. O Header, Navegator e Footer apresentam os mesmos elementos da Home-Page. 
 
+![Tela Entrar](img/entrar.png)
  
 ### Tela - Cadastrar
 A tela de cadastro o usuário de digita alguns dados pessoais e se classifica de acordo com a sua modalidade. O Header, Navegator e Footer apresentam os mesmos elementos da Home-Page.
 
- 
+![Tela Cadastrar](img/cadastrar.png)
+
 ### Tela - Sobre Airsoft
 Na tela Sobre o Airsoft traz informações essenciais sobre o esporte. O Header, Navegator e Footer apresentam os mesmos elementos da Home-Page.
 
+![Tela Sobre Airsoft](img/sobre_airsoft.png)
 
 ### Tela – Eventos Disponíveis
 Na tela Eventos disponíveis o usuário terá acesso aos eventos criados e disponíveis no momento para que ele possa se inscrever no mesmo. O Header, Navegator e Footer apresentam os mesmos elementos da Home-Page.
 
+![Tela Eventos Disponíveis](img/eventos_disponiveis.png)
 
 ### Tela - Criar Eventos
 Nesta tela o usuário terá a possibilidade de criar um evento de Airsoft disponibilizando dados como endereço, data do evento e uma breve descrição sobre o evento. O Header, Navegator e Footer apresentam os mesmos elementos da Home-Page.
 
+![Tela Criar Eventos](img/criar_eventos.png)
 
 ### Tela - Adicionar Equipes
 Nesta tela o usuário informa dados sobre a equipe a ser adicionada para se inscreverem em eventos futuros. O Header, Navegator e Footer apresentam os mesmos elementos da Home-Page.
 
+![Tela Adicionar Equipes](img/adicionar_equipes.png)
 
 ### Tela - Veja Mais
 Nesta tela o usuário terá a possibilidade de visualizar mais equipes de acordo com sua classificação no Ranking Nacional por equipes. O Header, Navegator e Footer apresentam os mesmos elementos da Home-Page.
 
+![Tela Veja Mais](img/veja_mais.png)
