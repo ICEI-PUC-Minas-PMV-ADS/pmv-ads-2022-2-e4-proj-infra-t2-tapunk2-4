@@ -6,26 +6,26 @@ A definição exata do problema e os pontos mais relevantes a serem tratados nes
 
 As personas levantadas durante o processo de entendimento do problema são apresentadas na Figuras que se seguem.
 
-![personas_Felipe](https://user-images.githubusercontent.com/81584300/189506969-4c57cab9-db04-4a69-b957-6a94f0f2c064.png)
+![Personas](img/felipe.PNG)
 
-![personas_Eduardo](https://user-images.githubusercontent.com/81584300/189506983-1e52a7a7-1d5f-4943-91a4-7c54a5194684.png)
+![Personas](img/eduardo.PNG)
 
-![personas_Helo](https://user-images.githubusercontent.com/81584300/189506990-1044e2a5-5dff-4aee-a8d2-8f40842ffd16.png)
+![Personas](img/helo.PNG)
 
-![personas_David](https://user-images.githubusercontent.com/81584300/189506994-67119149-2f2a-45b7-b0d3-4ea1022ad076.png)
+![Personas](img/david.PNG)
 
-![personas_Ari](https://user-images.githubusercontent.com/81584300/189507004-8226d65f-4237-4a9f-a20b-ef95d0d6fe16.png)
+![Personas](img/ari.PNG)
 
-![personas_Erick](https://user-images.githubusercontent.com/81584300/189507008-e7bfee81-3ba2-47a7-b445-d60143f39b0c.png)
+![Personas](img/erick.PNG)
 
-![personas_Andre](https://user-images.githubusercontent.com/81584300/189507029-5e56ac81-13ab-4ef1-908d-a48815432dd2.png)
+![Personas](img/andre.PNG)
 
 
 ## Histórias de Usuários
 
 A partir da compreensão do dia a dia das personas identificadas para o projeto, foram registradas as seguintes histórias de usuários.
 
-![historias_usuarios](https://user-images.githubusercontent.com/81584300/189507049-a094d034-ac31-48f7-9b45-9c50bf17873e.png)
+![Histórias de usuários](img/historias.PNG)
 
 
 
