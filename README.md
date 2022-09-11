@@ -6,7 +6,7 @@
 
 `EIXO 4`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Desenvolver uma plataforma com intuito de expandir a competição entre equipes, onde o usuário tem acesso a informações sobre a partida, pontuação e torneios, tornando possível competir com pessoas de vários lugares e expandindo a modalidade.
 
 ## Integrantes
 
