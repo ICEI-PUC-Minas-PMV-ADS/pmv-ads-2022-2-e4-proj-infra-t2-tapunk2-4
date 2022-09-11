@@ -35,21 +35,21 @@ O escopo funcional do projeto é definido por meio dos requisitos funcionais que
 ### Requisitos Funcionais
 A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
 
-![requisitos_Funcionais](https://user-images.githubusercontent.com/81584300/189507057-2551bdab-98ef-4603-abff-8630f2213a38.png)
+![requisitos_Funcionais](img/requisitos_func.PNG)
 
 
 
 ### Requisitos não Funcionais
 A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá atender.
 
-![requisitos_N_Funcionais](https://user-images.githubusercontent.com/81584300/189507062-711aa9de-d26a-4261-ba5b-427ce0d93750.png)
+![requisitos_N_Funcionais](img/requisitos_nao_func.PNG)
 
 
 
 ## Restrições
 As questões que limitam a execução desse projeto e que se configuram como obrigações claras para o desenvolvimento do projeto em questão são apresentadas na tabela a seguir.
 
-![restricoes](https://user-images.githubusercontent.com/81584300/189507064-2ac38589-9a3d-477f-938c-bbbfe768392b.png)
+![restricoes](img/restricoes.PNG)
 
 
 
