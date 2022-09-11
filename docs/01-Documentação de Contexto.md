@@ -38,6 +38,3 @@ Diante disso, percebemos a necessidade em desenvolver uma plataforma com intuito
 ## Público-Alvo
 
 Nosso público-alvo serão os já praticantes do esporte de Airsoft e os que estejam interessados em iniciar nessa modalidade de esporte.
-
-## Vídeo
-Segue link para visualização do vídeo com a apresentação do problema e proposta de solução: https://youtu.be/jh3NfzGyNQg 
