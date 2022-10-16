@@ -110,6 +110,11 @@ O usuário poderá realizar o cadastro de seus dados pessoais, bem como alterar 
 		public int hashCode() {
 			return Objects.hash(apelido, dataNasc, email, nome, sexo);
 		} 
+#### Repositorio:	
+	@Repository
+	public interface JogadorRepositorio extends MongoRepository<Jogador, String>{
+		Boolean existsByEmail(String email);
+	}
 
 
 ## Visualização da tela Adicionar Equipes (RF- 03) 
@@ -222,7 +227,10 @@ O usuário poderá realizar o cadastro de uma nova equipe, bem como alterar algu
 	public int hashCode() {
 		return Objects.hash(modalidade, nome, descricao, jogadores);
 	}
-		
+#### Repositorio:	
+	@Repository
+	public interface EquipeRepositorio extends MongoRepository<Equipe, String> {
+	}		
 
 
 ## Visualização da tela Criar Eventos (RF-04/05)  
@@ -317,4 +325,8 @@ O usuário poderá realizar o cadastro de um nova evento/torneio, bem como alter
 	@Override
 	public int hashCode() {
 		return Objects.hash(modalidade, descricao, dataEvento);
+	}
+#### Repositorio:	
+	@Repository
+	public interface EventoRepositorio extends MongoRepository<Evento, String>{
 	}
