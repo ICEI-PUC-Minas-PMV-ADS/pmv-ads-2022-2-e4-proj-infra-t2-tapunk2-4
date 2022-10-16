@@ -112,7 +112,7 @@ O usuário poderá realizar o cadastro de seus dados pessoais, bem como alterar 
 
 ## Visualização da tela Adicionar Equipes (RF- 03) 
 
-O usuário poderá realizar o cadastro de seus de uma nova equipe, bem como alterar algumas informações ou deletar a mesma.A estruturas de dados utilizada foi baseada em uma API Gateway com JAVA, SpringBoot, MongoDb e Docker. Evidência das funcionalidades:
+O usuário poderá realizar o cadastro de uma nova equipe, bem como alterar algumas informações ou deletar a mesma.A estruturas de dados utilizada foi baseada em uma API Gateway com JAVA, SpringBoot, MongoDb e Docker. Evidência das funcionalidades:
 
 ![1cadastroEquipe](https://user-images.githubusercontent.com/82246327/196059883-037be64b-9a46-451d-8bae-558aaa2cde09.png)
 
@@ -188,140 +188,127 @@ O usuário poderá realizar o cadastro de seus de uma nova equipe, bem como alte
 			return ResponseEntity.status(HttpStatus.ACCEPTED).build();
 		}
 		
+		@Getter
+@AllArgsConstructor
+@Setter
+@NoArgsConstructor
+@Document(collection = "Equipe")
+public class Equipe {
+	@Id
+	private String id;
+	private String nome;
+	private List <String> jogadores;
+	private String modalidade;
+	private String descricao;
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Equipe other = (Equipe) obj;
+		return Objects.equals(modalidade, other.modalidade) && Objects.equals(descricao, other.descricao)
+				&& Objects.equals(nome, other.nome) && Objects.equals(jogadores, other.jogadores);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(modalidade, nome, descricao, jogadores);
+	}
 		
 
 
-## Visualização da tela Criar Eventos (RF-04)  
+## Visualização da tela Criar Eventos (RF-04/05)  
 
-Na tela da home-Page será possível o usuário acessa a tela de “Criar Eventos”, a estruturas de dados utilizada foi baseada em HMTL e CSS. Exemplo da tela Criar Eventos:
+O usuário poderá realizar o cadastro de um nova evento/torneio, bem como alterar algumas informações, deletar e listar os eventos disponíveis.A estruturas de dados utilizada foi baseada em uma API Gateway com JAVA, SpringBoot, MongoDb e Docker. Evidência das funcionalidades:
 
-![tela Criar Eventos](img/tela_criarevento.png)
+![1cadastroEvento](https://user-images.githubusercontent.com/82246327/196060278-6a1e8852-61a6-4baa-a445-18972ffbb6f5.png)
+	
+![2listaEvento](https://user-images.githubusercontent.com/82246327/196060279-3ec39887-243c-4479-9e03-3ece0a753cfc.png)
+	
+![3alteraçãoEvento](https://user-images.githubusercontent.com/82246327/196060281-e66ca595-1482-4523-8e28-cc16e76db846.png)
+	
+![4deletandoEvento](https://user-images.githubusercontent.com/82246327/196060282-017e9ef2-3d37-4055-8355-3041c3caa8f1.png)
 
 ### Requisitos atendidos 
 
 * RF-04
-
-
-### Estrutura de Dados 
-
-      <main class="cadevent">
-    <section class="container produtos">
-      <h2 class="d-flex justify-content-center">ADICIONE SEU EVENTO</h2>
-      <img src="assets/images/googlemapevento.jpeg" alt="fotocriaevent"
-        class="fotoevent img-fluid d-flex justify-content-center">
-      <div class="formulario">
-        <form method="post" id="formulario" action="#">
-          <fieldset id="dados">
-            <p><label for="event">Data: </label><input type="date" name="teven" id="event"></p>
-            <p><label for="pais">Pais: </label><input type="text" name="tpais" id="pais" size="20" required></p>
-            <p><label for="cidade">Cidade: </label><input type="text" name="tcid" id="cidade" size="40"></p>
-            <p><label for="uf">UF</label>
-              <select name="uf" id="uf" required>
-                <option value="SP">SP</option>
-                <option value="RJ">RJ</option>
-                <option value="MG">MG</option>
-                <option value="GO">GO</option>
-                <option value="SC">SC</option>
-                <option value="PR">PR</option>
-              </select>
-            </p>
-            <p><label for="ender">Endereço:</label><input type="text" name="tender" id="ender" size="20"></p>
-          </fieldset>
-          <p><label for="tipoeve">Tipo do Evento: </label>
-            <select name="select" id="tipoeve">
-              <option selected disabled value="">Escolha</option>
-              <option value="SK">Skirmish</option>
-              <option value="MI">Milsim</option>
-              <option value="DM">Deathmatch</option>
-              <option value="CB">Capture the Flag</option>
-              <option value="MH">Man Hunt</option>
-              <option value="HT">Hostage</option>
-            </select>
-          </p>
-          <label for="descr">Descrição do Evento</label>
-          <textarea name="descr" id="descr" cols="50" rows="10"></textarea>
-          <div class="d-flex justify-content-center">
-            <button type="submit" name="botao" id="botao" value="enviar">CADASTRAR</button>
-          </div>
-        </form>
-      </div>
-    </section>
-      </main>
-
- 
-
-
-## Visualização da tela Eventos Disponíveis (RF-08/05)
-
-O usuário poderá realizar o cadastro de seus dados pessoais, bem como alterar alguma informação ou deletar sua conta.A estruturas de dados utilizada foi baseada em uma API Gateway com JAVA, SpringBoot, MongoDb e Docker. Evidência das funcionalidades:
-
-![tela Eventos Disponíveis](img/tela_eventosdisponiveis.png)
-
-### Requisitos atendidos 
-
-* RF-08
 * RF-05
-  
+
 ### Estrutura de Dados 
 
-      <main class="container-eventos">
-    <section class="container produtos">
-      <article>
-        <h2 class="d-flex justify-content-center">EVENTOS DISPONÍVEIS</h2>
+      @Controller
+@RequestMapping("cadastroevento")
+public class Controle {
+	@Autowired
+	private EventoRepositorio repositorio;
 
-        <div class="conteudo-eventos1 row justify-content-between">
-          <figure class="figure col-md-5">
-            <img src="assets/images/googlemapevento.jpeg"
-              class="imagem3 figure-img img-fluid col-xl-10 col-lg-10 col-md-12 nav-item d-flex align-items-center"
-              alt="imagem do mapa do do local do evento">
-          </figure>
-          <div class="texto1 col-sm-7">
-            <p> <strong>Airsoft Day</strong><br /> Evento das melhores equipes
-              em São Paulo,venha e se junte a nós nesta
-              aventura. Será na região de Mogi das Cruzes no dia 01/10/2021 ás
-              08h00 encontre uma equipe ou traga a sua.</p>
-            <div class="d-flex justify-content-center">
-              <button type="submit" name="botao" id="botao" value="enviar"> Clique aqui para participar desse
-                evento</button>
-            </div>
-          </div>
-        </div>
+	@GetMapping	
+	public ResponseEntity<List<Evento>> listarEvento() {
+		List<br.com.mov.Airsoft.modelo.Evento> lista = repositorio.findAll();
+		return ResponseEntity.ok(lista);
+	}
 
-        <div class="conteudo-eventos2 row justify-content-between">
-          <figure class="figure col-md-5">
-            <img src="assets/images/googlemapevento.jpeg"
-              class="imagem3 figure-img img-fluid col-xl-10 col-lg-10 col-md-12 nav-item d-flex align-items-center"
-              alt="imagem do mapa do do local do evento">
-          </figure>
-          <div class="texto2 col-sm-7">
-            <p> <strong>Batalha de Airsoft</strong><br /> Não perca esta
-              oportunidade de explorar suas emoções, se cadastre e venha pra ZL. Parque do Carmo em Itaquera - SP dia
-              01/11/2021 as 10h.</p>
-            <div class="d-flex justify-content-center">
-              <button type="submit" name="botao" id="botao" value="enviar"> Clique aqui para participar desse
-                evento</button>
-            </div>
-          </div>
-        </div>
-        <div class="conteudo-eventos3 row justify-content-between">
-          <figure class="figure col-md-5">
-            <img src="assets/images/googlemapevento.jpeg"
-              class="imagem3 figure-img img-fluid col-xl-10 col-lg-10 col-md-12 nav-item d-flex align-items-center"
-              alt="imagem do mapa do do local do evento">
-          </figure>
-          <div class="texto3 col-sm-7">
-            <p><strong>MovAirsoft</strong> <br />Antes de iniciar como jogador,
-              é importante estar atento a algumas dicas importantes.Separamos algumas dicas para te ajudar, venha
-              participar do nosso evento e fazer parte
-              desta aventura. Ibiapuera SP dia 25/12/2021 ás 09h30.</p>
-            <div class="d-flex justify-content-center">
-              <button type="submit" name="botao" id="botao" value="enviar"> Clique aqui para participar desse
-                evento</button>
-            </div>
-          </div>
-        </div>
-    </section>
-    </article>
-      </main>
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Evento> Evento(@PathVariable(name = "id") String id) {
+		Optional<br.com.mov.Airsoft.modelo.Evento> opdtionaEvento = repositorio.findById(id);
+		return ResponseEntity.ok(opdtionaEvento.get());
+	}
 
+	@PostMapping
+	public ResponseEntity<Void> salva(@RequestBody Evento evento) {
+		repositorio.insert(evento);
+		return ResponseEntity.status(HttpStatus.CREATED).build();
+	}
 
+	@DeleteMapping(value = "/{id}")
+	public ResponseEntity<Void> deletar(@PathVariable(name = "id") String id) {
+		repositorio.deleteById(id);
+		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+	}
+
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<Void> atualizar(@PathVariable(name = "id") String id, @Validated @RequestBody EventoDto dto) {
+		Optional<Evento> evento = repositorio.findById(id);
+		Evento ev = evento.get();
+		ev.setDataEvento(dto.getDataEvento());
+		ev.setDescricao(dto.getDescricao());
+		ev.setModalidade(dto.getModalidade());
+		repositorio.save(ev);
+		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+	}
+	
+	@Getter
+@AllArgsConstructor
+@Setter
+@NoArgsConstructor
+@Document(collection = "Evento")
+public class Evento {
+	@Id
+	private String id;
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	private LocalDate dataEvento;
+	private String modalidade;
+	private String descricao;
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Evento other = (Evento) obj;
+		return Objects.equals(modalidade, other.modalidade) && Objects.equals(dataEvento, other.dataEvento)
+				&& Objects.equals(descricao, other.descricao);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(modalidade, descricao, dataEvento);
+	}
