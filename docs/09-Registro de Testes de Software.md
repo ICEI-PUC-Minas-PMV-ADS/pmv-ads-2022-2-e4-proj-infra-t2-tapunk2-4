@@ -1,12 +1,13 @@
 # Registro de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
+Os resultados obtidos nos testes de Software estão descritos a seguir, foi utilizado o postaman para reproduzi-los.
 
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
+![RCT01](https://user-images.githubusercontent.com/82246327/196062226-f8f9c671-9a5f-40b0-a669-392ff644b7e6.png)
 
-## Avaliação
+![RCT02](https://user-images.githubusercontent.com/82246327/196062227-59f60b5e-e580-4222-828a-ee6ee9649070.png)
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+![RCT03](https://user-images.githubusercontent.com/82246327/196062228-3ff47cbc-aec5-4d2c-8259-577ebb0b628d.png)
 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+![RCT04](https://user-images.githubusercontent.com/82246327/196062224-0b3ea890-a2f8-4b02-8ff5-2487cf6a2498.png)
+
+![RCT05](https://user-images.githubusercontent.com/82246327/196062216-0f4c8ea9-7d32-4d2b-93cc-6bdb35f26c19.jpeg)
