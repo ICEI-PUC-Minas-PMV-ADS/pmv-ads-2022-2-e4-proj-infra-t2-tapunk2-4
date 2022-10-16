@@ -1,0 +1,19 @@
+package br.com.mov.Airsoft.modelo;
+
+import java.time.LocalDate;
+
+import javax.validation.constraints.Email;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+public class Equipe {
+	@Id
+	private String id;
+	private String nome;
+	private Jogador jogador;
+	private String modalidade;
+
+}

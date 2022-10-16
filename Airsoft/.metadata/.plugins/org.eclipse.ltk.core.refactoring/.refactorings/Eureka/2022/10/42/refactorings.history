@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;Eureka&apos;&#x0D;&#x0A;- Original project: &apos;Eureka&apos;&#x0D;&#x0A;- Original element: &apos;Eureka/src/main/java/br.com.mov.Airsoft.br.com.mov.Airsoft&apos;" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;br.com.mov.Airsoft.br.com.mov.Airsoft" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;br.com.mov.Airsoft.br.com.mov" element3="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;br.com.mov.Airsoft.br.com" element4="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;br.com.mov.Airsoft.br" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1665704570830" subPackages="false" version="1.0"/>
+</session>

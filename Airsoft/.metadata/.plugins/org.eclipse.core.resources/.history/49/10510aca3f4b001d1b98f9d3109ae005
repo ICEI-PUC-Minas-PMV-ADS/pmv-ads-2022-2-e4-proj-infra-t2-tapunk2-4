@@ -1,0 +1,16 @@
+package br.com.mov.Airsoft.controle;
+
+import javax.validation.constraints.NotNull;
+
+import lombok.Data;
+
+@Data	
+public class EventoDto {
+	@NotNull
+	private String data;
+	@NotNull
+	private String modalidade;
+	@NotNull
+	private String descricao;
+}
+ ne

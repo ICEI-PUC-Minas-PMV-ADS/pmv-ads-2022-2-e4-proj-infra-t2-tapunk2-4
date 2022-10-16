@@ -1,0 +1,6 @@
+spring.data.mongo.host=localhost
+spring.data.mongodb.database=cadastroequipe
+spring.data.mongodb.username=root
+spring.data.mongodb.password=example
+spring.data.mongodb.authentication-database=admin
+server.port=8082

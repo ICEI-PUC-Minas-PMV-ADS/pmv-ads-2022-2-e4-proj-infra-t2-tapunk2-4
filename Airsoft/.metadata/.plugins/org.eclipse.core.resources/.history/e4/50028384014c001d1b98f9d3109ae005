@@ -1,0 +1,14 @@
+package br.com.mov.Airsoft.controle;
+
+import br.com.mov.Airsoft.http.JogadorCliente;
+import br.com.mov.Airsoft.repositorio.EquipeRepositorio;
+
+public class ClientsService {
+	@Autowired
+	public EquipeRepositorio repositorio;
+	@Autowired
+	public JogadorCliente existejogador;
+
+	public ClientsService() {
+	}
+}

@@ -1,0 +1,21 @@
+package br.com.mov.Airsoft.controle;
+
+import java.util.List;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
+import lombok.Data;
+
+@Data	
+public class EquipeDto {
+	@NotNull
+	private String nome;
+	@NotNull
+	private String modalidade;
+	@NotNull
+	private String descricao;
+	@NotEmpty
+	private List <String> jogadores;
+}

@@ -1,0 +1,11 @@
+package br.com.mov.Airsoft.repositorio;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import br.com.mov.Airsoft.modelo.Usuario;
+
+@Repository
+public interface JogadorRepositorio extends MongoRepository<Usuario, String>{
+	
+}

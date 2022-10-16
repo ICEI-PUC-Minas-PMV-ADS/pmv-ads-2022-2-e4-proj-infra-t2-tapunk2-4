@@ -1,0 +1,68 @@
+package br.com.mov.Airsoft.controle;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import br.com.mov.Airsoft.modelo.Equipe;
+
+@Controller
+@RequestMapping("cadastroequipe")
+public class Controle {
+	private ClientsService data = new ClientsService();
+
+	@GetMapping
+	public ResponseEntity<List<Equipe>> listarEquipe() {
+		List<br.com.mov.Airsoft.modelo.Equipe> lista = data.repositorio.findAll();
+		return ResponseEntity.ok(lista);
+	}
+
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Equipe> Equipe(@PathVariable(name = "id") String id) {
+		Optional<br.com.mov.Airsoft.modelo.Equipe> opdtionaEquipe = data.repositorio.findById(id);
+		return ResponseEntity.ok(opdtionaEquipe.get());
+	}
+
+	@PostMapping
+	public ResponseEntity<String> salva(@RequestBody Equipe equipe) {
+		List<String> jogadores = equipe.getJogadores();
+		for (String email : jogadores) {
+			boolean existe = this.data.existejogador.consultaJogador(email);
+			if (!existe) {
+				return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Jogador não encontrado: "+ email );
+						}
+		}
+		
+		data.repositorio.insert(equipe);
+		return ResponseEntity.status(HttpStatus.CREATED).build();
+	}
+
+	@DeleteMapping(value = "/{id}")
+	public ResponseEntity<Void> deletar(@PathVariable(name = "id") String id) {
+		data.repositorio.deleteById(id);
+		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+	}
+
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<Void> atualizar(@PathVariable(name = "id") String id, @Validated @RequestBody EquipeDto dto) {
+		Optional<Equipe> equipe = data.repositorio.findById(id);
+		Equipe eq = equipe.get();
+		eq.setNome(dto.getNome());
+		eq.setDescricao(dto.getDescricao());
+		eq.setModalidade(dto.getModalidade());
+		eq.setJogadores(dto.getJogadores());
+		data.repositorio.save(eq);
+		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+	}
+}

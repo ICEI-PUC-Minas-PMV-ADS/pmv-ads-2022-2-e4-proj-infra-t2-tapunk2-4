@@ -1,0 +1,42 @@
+package br.com.mov.Airsoft.controle;
+
+import javax.naming.AuthenticationException;
+
+import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.mov.Airsoft.controle.dto.TokenDto;
+import br.com.mov.Airsoft.controle.form.LoginForm;
+import br.com.mov.Airsoft.seguranca.TokenServico;
+
+@RestController
+@RequestMapping("/auth")
+public class AutenticacaoControle {
+	
+	@Autowired
+	private AuthenticationManager authManager;
+	
+	@Autowired
+	private TokenServico tokenServico;
+
+	@PostMapping
+	public ResponseEntity<TokenDto> autenticar(@RequestBody @Validated LoginForm form) {
+		UsernamePasswordAuthenticationToken dadosLogin = form.converter();
+		
+		try {
+			org.springframework.security.core.Authentication authentication = authManager.authenticate(dadosLogin);
+			String token = tokenServico.gerarToken(authentication);	
+			return ResponseEntity.ok(new TokenDto(token, "Bearer"));
+		} catch (AuthenticationException e) {
+			return ResponseEntity.badRequest().build();
+		}
+	}
+}

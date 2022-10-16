@@ -1,0 +1,82 @@
+package br.com.mov.Airsoft.controle;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import br.com.mov.Airsoft.http.JogadorCliente;
+import br.com.mov.Airsoft.modelo.Equipe;
+import br.com.mov.Airsoft.repositorio.EquipeRepositorio;
+
+@Controller
+@RequestMapping("cadastroequipe")
+public class Controle {
+	@Autowired
+	private EquipeRepositorio repositorio;
+	@Autowired
+	private JogadorCliente existejogador;
+
+	@GetMapping
+	public ResponseEntity<List<Equipe>> listarEquipe() {
+		List<br.com.mov.Airsoft.modelo.Equipe> lista = repositorio.findAll();
+		return ResponseEntity.ok(lista);
+	}
+
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Equipe> Equipe(@PathVariable(name = "id") String id) {
+		Optional<br.com.mov.Airsoft.modelo.Equipe> opdtionaEquipe = repositorio.findById(id);
+		return ResponseEntity.ok(opdtionaEquipe.get());
+	}
+
+	@PostMapping
+	public ResponseEntity<String> salva(@RequestBody Equipe equipe) {
+		List<String> jogadores = equipe.getJogadores();
+		for (String email : jogadores) {
+			boolean existe = this.existejogador.consultaJogador(email);
+			if (!existe) {
+				return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Jogador não encontrado: "+ email );
+						}
+		}
+		
+		repositorio.insert(equipe);
+		return ResponseEntity.status(HttpStatus.CREATED).build();
+	}
+
+	@DeleteMapping(value = "/{id}")
+	public ResponseEntity<Void> deletar(@PathVariable(name = "id") String id) {
+		repositorio.deleteById(id);
+		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+	}
+
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<String> atualizar(@PathVariable(name = "id") String id, @Validated @RequestBody EquipeDto dto) {
+		Optional<Equipe> equipe = repositorio.findById(id);
+		Equipe eq = equipe.get();
+		
+		List<String> jogadores = eq.getJogadores();
+		for (String email : jogadores) {
+			boolean existe = this.existejogador.consultaJogador(email);
+			if (!existe) {
+				return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Jogador não encontrado: "+ email );
+						}
+		}
+		eq.setNome(dto.getNome());
+		eq.setDescricao(dto.getDescricao());
+		eq.setModalidade(dto.getModalidade());
+		eq.setJogadores(dto.getJogadores());
+		repositorio.save(eq);
+		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+	}
+}

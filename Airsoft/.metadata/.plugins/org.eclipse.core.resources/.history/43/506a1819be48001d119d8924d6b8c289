@@ -1,0 +1,10 @@
+package br.com.mov.Airsoft.controle;
+
+import javax.validation.constraints.NotNull;
+
+public class EquipeDto {
+	@NotNull
+	private String nome;
+	@NotNull
+	private String modalidade;
+}

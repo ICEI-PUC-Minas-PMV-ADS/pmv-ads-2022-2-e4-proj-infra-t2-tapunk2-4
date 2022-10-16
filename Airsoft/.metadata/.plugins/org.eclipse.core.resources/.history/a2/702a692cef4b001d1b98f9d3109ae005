@@ -1,0 +1,8 @@
+spring.data.mongo.host=localhost
+spring.data.mongodb.database=cadastrojogador
+spring.data.mongodb.username=root
+spring.data.mongodb.password=example
+spring.data.mongodb.authentication-database=admin
+server.port=8080
+spring.application.name=msgateway
+eureka.client.serviceUrl.defaultZone=http://localhost:9090/eureka
