@@ -2,8 +2,8 @@
 
 Requisitos para realização dos testes de software são:
 
-●	Site publicado na Internet
-●	Navegador da Internet – Chrome e Edge
+*	Site publicado na Internet
+*	Navegador da Internet – Chrome e Edge
 
 Os testes funcionais a serem realizados na solução são descritos a seguir.
 
