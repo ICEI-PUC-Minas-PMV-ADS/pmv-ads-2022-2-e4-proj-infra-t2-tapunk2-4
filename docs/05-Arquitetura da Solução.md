@@ -9,9 +9,7 @@ Nesta seção são apresentados os detalhes técnicos da solução criada pela e
 
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas.
 
-![diagrama_classe](https://user-images.githubusercontent.com/81584300/189506210-332005d0-054e-4366-ac87-1e45c33c1217.png)
-
-
+![diagrama_classe2](https://user-images.githubusercontent.com/81584300/196059791-c5683b55-a5b8-421d-b7cc-dd0606a574cf.png)
 
 
 
