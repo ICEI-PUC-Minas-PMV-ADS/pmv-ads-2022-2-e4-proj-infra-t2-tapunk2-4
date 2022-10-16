@@ -2,7 +2,7 @@
 
 Nesta seção são apresentados os detalhes técnicos da solução criada pela equipe, tratando dos componentes que fazem parte da solução e do ambiente de hospedagem da solução.
 
-![arquitetura_solucao](https://user-images.githubusercontent.com/81584300/189506167-379544d5-85ce-402c-8fde-145c261eb06f.png)
+![arquitetura](https://user-images.githubusercontent.com/82246327/196053529-a101ec15-5f7b-4ee2-952c-5c5d6ea88bc4.png)
 
 
 ## Diagrama de Classes
