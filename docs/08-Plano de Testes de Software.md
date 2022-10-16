@@ -15,6 +15,6 @@ Os testes funcionais a serem realizados na solução são descritos a seguir.
 
 ![CT04](https://user-images.githubusercontent.com/82246327/196061452-b9f63933-8bad-407e-8071-26ee1a64e2bc.png)
 
-![CT05](https://user-images.githubusercontent.com/82246327/196061454-38b3f0df-acdf-45ed-8997-718724b7cf19.png)
+![CT05 (2)](https://user-images.githubusercontent.com/82246327/196062114-dc055af1-04e8-4576-9203-8bd2b9c73e19.jpeg)
 
-![CT06](https://user-images.githubusercontent.com/82246327/196061458-96327372-635b-4add-a785-effbe71aa902.png)
+![CT06](https://user-images.githubusercontent.com/82246327/196062118-a8c2e378-4d30-4935-9315-d2da17f76643.jpeg)
