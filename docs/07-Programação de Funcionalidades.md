@@ -24,6 +24,7 @@ O usuário poderá realizar o cadastro de seus dados pessoais, bem como alterar 
 
 ### Estrutura de Dados 
 
+#### Controle:
 	@RestController
 	@RequestMapping("usuario")
 	public class Controle {
@@ -72,7 +73,8 @@ O usuário poderá realizar o cadastro de seus dados pessoais, bem como alterar 
 		repositorio.save(jog);
 		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
 	}
-
+	
+#### Modelo:
 	@Getter
 	@AllArgsConstructor
 	@Setter
@@ -120,7 +122,7 @@ O usuário poderá realizar o cadastro de uma nova equipe, bem como alterar algu
 
 ![3alteracaoEquipe](https://user-images.githubusercontent.com/82246327/196059885-fff882e0-66b8-4df5-ad27-799a304c631f.png)
 
-![4deleteEquipe](https://user-images.githubusercontent.com/82246327/196059886-c3b9881e-d89b-4fb9-931a-3e2984617c2e.png
+![4deleteEquipe](https://user-images.githubusercontent.com/82246327/196059886-c3b9881e-d89b-4fb9-931a-3e2984617c2e.png)
 
 ### Requisitos atendidos 
 
@@ -128,78 +130,80 @@ O usuário poderá realizar o cadastro de uma nova equipe, bem como alterar algu
 
 ### Estrutura de Dados 
 
+#### Controle:
 	@Controller
 	@RequestMapping("cadastroequipe")
 	public class Controle {
-		@Autowired
-		private EquipeRepositorio repositorio;
-		@Autowired
-		private JogadorCliente existejogador;
+	@Autowired
+	private EquipeRepositorio repositorio;
+	@Autowired
+	private JogadorCliente existejogador;
 
-		@GetMapping
-		public ResponseEntity<List<Equipe>> listarEquipe() {
-			List<br.com.mov.Airsoft.modelo.Equipe> lista = repositorio.findAll();
-			return ResponseEntity.ok(lista);
+	@GetMapping
+	public ResponseEntity<List<Equipe>> listarEquipe() {
+		List<br.com.mov.Airsoft.modelo.Equipe> lista = repositorio.findAll();
+		return ResponseEntity.ok(lista);
 		}
 
-		@GetMapping(value = "/{id}")
-		public ResponseEntity<Equipe> Equipe(@PathVariable(name = "id") String id) {
-			Optional<br.com.mov.Airsoft.modelo.Equipe> opdtionaEquipe = repositorio.findById(id);
-			return ResponseEntity.ok(opdtionaEquipe.get());
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Equipe> Equipe(@PathVariable(name = "id") String id) {
+		Optional<br.com.mov.Airsoft.modelo.Equipe> opdtionaEquipe = repositorio.findById(id);
+		return ResponseEntity.ok(opdtionaEquipe.get());
 		}
 
-		@PostMapping
-		public ResponseEntity<String> salva(@RequestBody Equipe equipe) {
-			List<String> jogadores = equipe.getJogadores();
-			for (String email : jogadores) {
-				boolean existe = this.existejogador.consultaJogador(email);
-				if (!existe) {
-					return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Jogador não encontrado: "+ email );
-						}
+	@PostMapping
+	public ResponseEntity<String> salva(@RequestBody Equipe equipe) {
+		List<String> jogadores = equipe.getJogadores();
+		for (String email : jogadores) {
+			boolean existe = this.existejogador.consultaJogador(email);
+			if (!existe) {
+				return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Jogador não encontrado: "+ email );
+					}
+		}
+		
+		repositorio.insert(equipe);
+		return ResponseEntity.status(HttpStatus.CREATED).build();
+		}
+
+	@DeleteMapping(value = "/{id}")
+	public ResponseEntity<Void> deletar(@PathVariable(name = "id") String id) {
+		repositorio.deleteById(id);
+		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+		}
+
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<String> atualizar(@PathVariable(name = "id") String id, @Validated @RequestBody EquipeDto dto) {
+		Optional<Equipe> equipe = repositorio.findById(id);
+		Equipe eq = equipe.get();
+		
+		List<String> jogadores = eq.getJogadores();
+		for (String email : jogadores) {
+			boolean existe = this.existejogador.consultaJogador(email);
+			if (!existe) {
+				return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Jogador não encontrado: "+ email );
+					}
 			}
-		
-			repositorio.insert(equipe);
-			return ResponseEntity.status(HttpStatus.CREATED).build();
-		}
-
-		@DeleteMapping(value = "/{id}")
-		public ResponseEntity<Void> deletar(@PathVariable(name = "id") String id) {
-			repositorio.deleteById(id);
-			return ResponseEntity.status(HttpStatus.ACCEPTED).build();
-		}
-
-		@PutMapping(value = "/{id}")
-		public ResponseEntity<String> atualizar(@PathVariable(name = "id") String id, @Validated @RequestBody EquipeDto dto) {
-			Optional<Equipe> equipe = repositorio.findById(id);
-			Equipe eq = equipe.get();
-		
-			List<String> jogadores = eq.getJogadores();
-			for (String email : jogadores) {
-				boolean existe = this.existejogador.consultaJogador(email);
-				if (!existe) {
-					return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Jogador não encontrado: "+ email );
-						}
-			}
-			eq.setNome(dto.getNome());
-			eq.setDescricao(dto.getDescricao());
-			eq.setModalidade(dto.getModalidade());
-			eq.setJogadores(dto.getJogadores());
-			repositorio.save(eq);
-			return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+		eq.setNome(dto.getNome());
+		eq.setDescricao(dto.getDescricao());
+		eq.setModalidade(dto.getModalidade());
+		eq.setJogadores(dto.getJogadores());
+		repositorio.save(eq);
+		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
 		}
 		
-		@Getter
-@AllArgsConstructor
-@Setter
-@NoArgsConstructor
-@Document(collection = "Equipe")
-public class Equipe {
-	@Id
-	private String id;
-	private String nome;
-	private List <String> jogadores;
-	private String modalidade;
-	private String descricao;
+#### Modelo:
+	@Getter
+	@AllArgsConstructor
+	@Setter
+	@NoArgsConstructor
+	@Document(collection = "Equipe")
+		public class Equipe {
+		@Id
+		private String id;
+		private String nome;
+		private List <String> jogadores;
+		private String modalidade;
+		private String descricao;
 
 	@Override
 	public boolean equals(Object obj) {
@@ -239,21 +243,22 @@ O usuário poderá realizar o cadastro de um nova evento/torneio, bem como alter
 * RF-05
 
 ### Estrutura de Dados 
-
-      @Controller
-@RequestMapping("cadastroevento")
-public class Controle {
-	@Autowired
-	private EventoRepositorio repositorio;
+	
+#### Controle:
+      	@Controller
+	@RequestMapping("cadastroevento")
+	public class Controle {
+		@Autowired
+		private EventoRepositorio repositorio;
 
 	@GetMapping	
 	public ResponseEntity<List<Evento>> listarEvento() {
 		List<br.com.mov.Airsoft.modelo.Evento> lista = repositorio.findAll();
 		return ResponseEntity.ok(lista);
-	}
+		}
 
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<Evento> Evento(@PathVariable(name = "id") String id) {
+		public ResponseEntity<Evento> Evento(@PathVariable(name = "id") String id) {
 		Optional<br.com.mov.Airsoft.modelo.Evento> opdtionaEvento = repositorio.findById(id);
 		return ResponseEntity.ok(opdtionaEvento.get());
 	}
@@ -280,20 +285,21 @@ public class Controle {
 		repositorio.save(ev);
 		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
 	}
-	
+#### Modelo:
+
 	@Getter
-@AllArgsConstructor
-@Setter
-@NoArgsConstructor
-@Document(collection = "Evento")
-public class Evento {
-	@Id
-	private String id;
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
-	@JsonFormat(pattern = "dd/MM/yyyy")
-	private LocalDate dataEvento;
-	private String modalidade;
-	private String descricao;
+	@AllArgsConstructor
+	@Setter
+	@NoArgsConstructor
+	@Document(collection = "Evento")
+	public class Evento {
+		@Id
+		private String id;
+		@DateTimeFormat(pattern = "dd/MM/yyyy")
+		@JsonFormat(pattern = "dd/MM/yyyy")
+		private LocalDate dataEvento;
+		private String modalidade;
+		private String descricao;
 
 	@Override
 	public boolean equals(Object obj) {
