@@ -24,10 +24,11 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets/scss/style.scss"
+              "src/assets",
+              "src/favicon.ico"
             ],
             "styles": [
+              "src/assets/css/style.css",
               "src/styles.scss"
             ],
             "scripts": [

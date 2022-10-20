@@ -1,0 +1,65 @@
+  <!-- ínicio da MAIN-->
+  <main class="cadastro">
+    <section class="container produtos">
+      <h2 class="d-flex justify-content-center">CADASTRO DO USUÁRIO</h2>
+      <div class="formulario d-flex justify-content-between">
+        <figure class="figure">
+          <img src="assets/images/adicionar-img.jpeg" class="imagem4
+              figure-img col-md-12 img-fluid rounded float-left" alt="caixa para adicionar equipe">
+          <figcaption class="figure-caption">Adicione sua imagem</figcaption>
+          <!-- <input type="file" id="fileimage" /> -->
+        </figure>
+        <form method="post" id="formulario" action="#">
+          <fieldset id="dados">
+            <p><label for="nome">Nome:</label><input type="text" name="tnome" id="nome" size="40" required></p>
+            <p><label for="apelido">Apelido: </label><input type="text" name="tapelido" id="apelido" size="39" required>
+            </p>
+            <p><label for="nasc">Data de Nasc: </label><input type="date" name="tnasc" id="nasc"></p>
+            <label for="sexo">Sexo:</label><select name="" id="sexo">
+              <option selected disabled value="">Selecione</option>
+              <option value="">Masculino</option>
+              <option value="">Feminino</option>
+            </select>
+            <p><label for="email">Email: </label><input type="email" name="tmail" id="email" size="41" required></p>
+            <p><label for="pais">Pais: </label><input type="text" name="tpais" id="pais" size="40"></p>
+            <p><label for="cidade">Cidade: </label>
+              <input type="text" name="tcid" id="cidade" size="40">
+            </p>
+            <p><label for="uf">UF</label>
+              <select name="uf" id="uf" required>
+                <option value="SP">SP</option>
+                <option value="RJ">RJ</option>
+                <option value="MG">MG</option>
+                <option value="GO">GO</option>
+                <option value="SC">SC</option>
+                <option value="PR">PR</option>
+              </select>
+            </p>
+          </fieldset>
+          <p><label for="modal">Pratica qual modalidade: </label>
+            <select name="select" id="modalselect">
+              <option selected disabled value="">Escolha</option>
+              <option value="SK">Skirmish</option>
+              <option value="MI">Milsim</option>
+              <option value="DM">Deathmatch</option>
+              <option value="CB">Capture the Flag</option>
+              <option value="MH">Man Hunt</option>
+              <option value="HT">Hostage</option>
+            </select>
+          </p>
+          <p><label>Operador desde: <input type="date" name="Odata" id="odata"></label></p>
+          <fieldset id="links">
+            <p><label for="site">Site: </label><input type="text" name="tsite" id="site" size="40"></p>
+            <p><label for="facebook">Facebook: </label><input type="text" name="tface" id="facebook" size="40"></p>
+            <p><label for="youtube">Youtube: </label><input type="text" name="tyou" id="youtube" size="40"></p>
+            <p><label for="instagran">Instagram: </label><input type="text" name="tinst" id="instagran" size="40"></p>
+            <p><label for="twitter">Twitter: </label><input type="text" name="ttwit" id="twitter" size="40"></p>
+            <p><label for="g+">G+ Google+: </label><input type="text" name="g+" id="googlemais" size="40"></p>
+          </fieldset>
+
+          <button type="submit" name="botao" id="botao">CADASTRAR</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!-- end main -->
