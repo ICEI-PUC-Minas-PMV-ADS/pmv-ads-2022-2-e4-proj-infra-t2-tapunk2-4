@@ -29,6 +29,7 @@
             ],
             "styles": [
               "src/assets/css/style.css",
+              "src/assets/css/cadastro.css",
               "src/styles.scss"
             ],
             "scripts": [
@@ -108,5 +109,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

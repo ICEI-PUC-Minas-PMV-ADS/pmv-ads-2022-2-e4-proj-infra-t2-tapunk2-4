@@ -1,0 +1,41 @@
+<main class="cadevent">
+  <section class="container produtos">
+    <h2 class="d-flex justify-content-center">ADICIONE SEU EVENTO</h2>
+    <!-- <img src="assets/images/googlemapevento.jpeg" alt="fotocriaevent"
+      class="fotoevent img-fluid d-flex justify-content-center"> -->
+    <div class="formulario">
+      <form method="post" id="formulario" action="#">
+        <fieldset id="dados">
+          <p><label for="event">Data: </label><input type="date" name="teven" id="event"></p>
+          <!-- <p><label for="pais">Pais: </label><input type="text" name="tpais" id="pais" size="20" required></p>
+          <p><label for="cidade">Cidade: </label><input type="text" name="tcid" id="cidade" size="40"></p>
+          <p><label for="uf">UF</label>
+            <select name="uf" id="uf" required>
+              <option value="SP">SP</option>
+              <option value="RJ">RJ</option>
+              <option value="MG">MG</option>
+              <option value="GO">GO</option>
+              <option value="SC">SC</option>
+              <option value="PR">PR</option>
+            </select>
+          </p> -->
+          <p><label for="ender">Endereço:</label><input type="text" name="tender" id="ender" size="20"></p>
+        </fieldset>
+        <p><label for="tipoeve">Tipo do Evento: </label>
+          <select name="select" id="tipoeve">
+            <option selected disabled value="">Escolha</option>
+            <option value="SK">Skirmish</option>
+            <option value="MI">Milsim</option>
+            <option value="DM">Deathmatch</option>
+            <option value="CB">Capture the Flag</option>
+            <option value="MH">Man Hunt</option>
+            <option value="HT">Hostage</option>
+          </select>
+        </p>
+        <label for="descr">Descrição do Evento</label>
+        <textarea name="descr" id="descr" cols="50" rows="10"></textarea>
+        <button type="submit" name="botao" id="botao" value="enviar">CADASTRAR</button>
+      </form>
+    </div>
+  </section>
+</main>

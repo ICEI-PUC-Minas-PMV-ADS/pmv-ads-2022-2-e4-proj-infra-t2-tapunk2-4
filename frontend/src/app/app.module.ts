@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { CreateTeamComponent } from './create-team/create-team.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     HomeComponent,
     LoginComponent,
     AboutComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    CreateTeamComponent
   ],
   imports: [
     BrowserModule,

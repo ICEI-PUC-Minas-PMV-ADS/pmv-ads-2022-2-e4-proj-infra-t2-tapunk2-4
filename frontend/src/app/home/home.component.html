@@ -29,14 +29,14 @@
       <!-- banner -->
       <article class="col-md-6">
         <div class="banners-promocionais-statico-12x d-flex align-items-center">
-          <a href="adicionarevento.html">
+          <a [routerLink]="['/event/create']">
             <p>Criar Eventos</p>
           </a>
         </div>
       </article>
       <article class="col-md-6">
         <div class="banners-promocionais-statico-todo-br d-flex align-items-center">
-          <a href="adicionarequipe.html">
+          <a [routerLink]="['/createTeam']" >
             <p>Adicionar Equipes</p>
           </a>
         </div>
@@ -104,9 +104,9 @@
       <!-- end produtos -->
     </article>
     <!-- listagem dos produtos -->
-    <div class="d-flex justify-content-center">
+    <!-- <div class="d-flex justify-content-center">
       <a href="/vejaMais.html" class="btn btn-warning col-md-2">VEJA MAIS</a>
-    </div>
+    </div> -->
   </section>
   <!-- end container produtos -->
 </main>
