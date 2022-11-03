@@ -1,3 +1,5 @@
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,7 +15,9 @@ import { ListEventComponent } from './list-event/list-event.component';
   ],
   imports: [
     CommonModule,
-    EventRoutingModule
+    EventRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ]
 })
 export class EventModule { }

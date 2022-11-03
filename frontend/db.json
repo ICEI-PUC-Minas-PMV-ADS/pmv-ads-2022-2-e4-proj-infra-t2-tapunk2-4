@@ -1,0 +1,149 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "Murilo Anthony André Viana",
+      "apelido": "",
+      "data_nasc": "14/03/1949",
+      "sexo": "Masculino",
+      "email": "murilo_anthony_viana@tuenkers.com.br",
+      "senha": "QFypo7xWzz"
+    },
+    {
+      "id": 2,
+      "nome": "Ricardo Carlos Teixeira",
+      "apelido": "",
+      "data_nasc": "01/11/1962",
+      "sexo": "Masculino",
+      "email": "ricardo_teixeira@depotit.com.br",
+      "senha": "FhXpZUBeTE"
+    },
+    {
+      "id": 3,
+      "nome": "Giovanna Rebeca da Cunha",
+      "apelido": "",
+      "data_nasc": "02/07/1964",
+      "sexo": "Feminino",
+      "email": "giovannarebecadacunha@gruporeis.net",
+      "senha": "y7uFE0wuNm"
+    },
+    {
+      "id": 4,
+      "nome": "Giovanni Renan Pereira",
+      "apelido": "",
+      "data_nasc": "20/03/1984",
+      "sexo": "Masculino",
+      "email": "giovanni_renan_pereira@r7.com",
+      "senha": "ZZKlsIcNkr"
+    },
+    {
+      "id": 5,
+      "nome": "Lívia Sara Márcia Cardoso",
+      "apelido": "",
+      "data_nasc": "10/10/1986",
+      "sexo": "Feminino",
+      "email": "livia.sara.cardoso@gvmail.br",
+      "senha": "MtAUMg2Ji4"
+    },
+    {
+      "nome": "Rodrigo Charles",
+      "apelido": "rato",
+      "dataNasc": "1111-11-11",
+      "sexo": "Masculino",
+      "email": "teste@teste.com",
+      "senha": "1234",
+      "id": 6
+    }
+  ],
+  "cadastroevento": [
+    {
+      "id": 1,
+      "dataEvento": "01/02/2023",
+      "modalidade": "Modalidade 01",
+      "descricao": "Descrição do evento 01"
+    },
+    {
+      "id": 2,
+      "dataEvento": "02/07/2023",
+      "modalidade": "Modalidade evento 02",
+      "descricao": "Descrição evento 02"
+    },
+    {
+      "id": 3,
+      "dataEvento": "06/09/2022",
+      "modalidade": "Modalidade evento 03",
+      "descricao": "Descrição do evento 03"
+    },
+    {
+      "id": 4,
+      "dataEvento": "03/10/2022",
+      "modalidade": "Modalidade evento 04",
+      "descricao": "Descrição evento 04"
+    },
+    {
+      "dataEvento": "2023-01-01",
+      "endereco": "asd",
+      "modalidade": "DM",
+      "descricao": "Evento de teste",
+      "id": 5
+    },
+    {
+      "dataEvento": "2023-01-01",
+      "modalidade": "DM",
+      "descricao": "Teste de evento 2",
+      "id": 6
+    }
+  ],
+  "cadastroequipe": [
+    {
+      "id": 1,
+      "modalidade": "de total responsabilidade do us",
+      "descricao": " a gerar documentos. Normalmente necessários pa",
+      "jogadores": [
+        "Aline Analu Gonçalves",
+        "Benedita Vanessa Rodrigues",
+        "Calebe Yago Porto"
+      ]
+    },
+    {
+      "id": 2,
+      "modalidade": "de total responsabilidade do us",
+      "descricao": " a gerar documentos. Normalmente necessários pa",
+      "jogadores": [
+        "Aline Analu Gonçalves",
+        "Benedita Vanessa Rodrigues",
+        "Calebe Yago Porto"
+      ]
+    },
+    {
+      "id": 3,
+      "modalidade": "de total responsabilidade do us",
+      "descricao": " a gerar documentos. Normalmente necessários pa",
+      "jogadores": [
+        "Aline Analu Gonçalves",
+        "Benedita Vanessa Rodrigues",
+        "Calebe Yago Porto"
+      ]
+    },
+    {
+      "id": 4,
+      "modalidade": "de total responsabilidade do us",
+      "descricao": " a gerar documentos. Normalmente necessários pa",
+      "jogadores": [
+        "Aline Analu Gonçalves",
+        "Benedita Vanessa Rodrigues",
+        "Calebe Yago Porto"
+      ]
+    },
+    {
+      "nome": "Equipe 10",
+      "modalidade": "SK",
+      "descricao": "Descrição equipe 10",
+      "jogadores": [
+        "Jogador 1",
+        "Jogador 2"
+      ],
+      "id": 5
+    }
+  ]
+}

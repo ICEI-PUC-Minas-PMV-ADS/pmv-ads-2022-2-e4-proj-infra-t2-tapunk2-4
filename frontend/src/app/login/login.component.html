@@ -3,19 +3,19 @@
   <main class="container">
     <h1 class="d-flex justify-content-center"><strong>LOGIN</strong></h1>
     <article class="row d-flex align-items-center">
-      <form action="">
+      <form [formGroup]="form">
         <div class="email">
           <label>E-mail</label>
-          <input type="email" name="email" id="email" required placeholder="Digite seu E-mail">
+          <input type="email" formControlName="email" name="email" id="email" required placeholder="Digite seu E-mail">
           <div class="underline"></div>
         </div>
         <div class="senha">
           <label>Senha</label>
-          <input type="password" name="Senha" id="Senha" required placeholder="Digite sua senha">
+          <input type="password" formControlName="password" name="Senha" id="Senha" required placeholder="Digite sua senha">
           <div class="underline"></div>
         </div>
         <div class="d-flex justify-content-center">
-          <input onclick="verificarCliente()" type="submit" value="Entrar">
+          <input (click)="login()" type="submit" value="Entrar">
         </div>
         <div class="d-flex bd-highlight mb-1">
           <div class="mr-auto p-2 bd-highlight">

@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  msEquipe: "http://localhost:3000",
+  msEvento: "http://localhost:3000",
+  msUsuario: "http://localhost:3000",
+  msLogin: "http://localhost:3000"
 };
 
 /*
