@@ -4,30 +4,25 @@
     <!-- <img src="assets/images/googlemapevento.jpeg" alt="fotocriaevent"
       class="fotoevent img-fluid d-flex justify-content-center"> -->
     <div class="formulario">
-      <form [formGroup]="formEvent" id="formulario"
-        (ngSubmit)="addEvent(formEvent.value)">
+      <form [formGroup]="formEvent" id="formulario" (ngSubmit)="addEvent(formEvent.value)">
         <fieldset id="dados">
-          <p><label for="event">Data: </label><input type="date"
-              formControlName="dataEvento" name="teven" id="event"></p>
-          <!--           <p><label for="ender">Endereço:</label><input type="text" formControlName="endereco" name="tender" id="ender" size="20"></p>
- -->
+          <p><label for="event">Data: </label><input type="date" formControlName="dataEvento | date: 'dd/MM/yyyy'" name="teven" id="event"></p>
+          <p><label for="ender">Endereço:</label><input type="text" formControlName="endereco" name="tender" id="ender" size="20"></p>
         </fieldset>
         <p><label for="tipoeve">Tipo do Evento: </label>
           <select name="select" formControlName="modalidade" id="tipoeve">
             <option selected disabled value="">Escolha</option>
-            <option value="SK">Skirmish</option>
-            <option value="MI">Milsim</option>
-            <option value="DM">Deathmatch</option>
-            <option value="CB">Capture the Flag</option>
-            <option value="MH">Man Hunt</option>
-            <option value="HT">Hostage</option>
+            <option value="Skirmish">Skirmish</option>
+            <option value="Milsim">Milsim</option>
+            <option value="Deathmatch">Deathmatch</option>
+            <option value="Capture the Flag">Capture the Flag</option>
+            <option value="Man Hunt">Man Hunt</option>
+            <option value="Hostage">Hostage</option>
           </select>
         </p>
         <label for="descr">Descrição do Evento</label>
-        <textarea formControlName="descricao" name="descr" id="descr" cols="50"
-          rows="10"></textarea>
-        <button type="submit" name="botao" id="botao" value="enviar"
-          [disabled]="formEvent.invalid">CADASTRAR</button>
+        <textarea formControlName="descricao" name="descr" id="descr" cols="50" rows="10"></textarea>
+        <button type="submit" name="botao" id="botao" value="enviar" [disabled]="formEvent.invalid">CADASTRAR</button>
       </form>
     </div>
   </section>

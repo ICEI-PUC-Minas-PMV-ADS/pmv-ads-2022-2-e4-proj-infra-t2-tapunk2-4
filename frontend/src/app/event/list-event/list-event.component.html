@@ -1,21 +1,22 @@
+ <!-- main -->
  <main class="container-eventos">
   <section class="container produtos">
     <!-- Eventos Disponíveis -->
     <article>
       <h2 class="d-flex justify-content-center">EVENTOS DISPONÍVEIS</h2>
 
- <!--      <div class="conteudo-eventos1"> -->
+      <div class="conteudo-eventos1">
         <!-- <img src="./assets/images/imgLocal.jpeg" class="imagem3"> -->
-        <!-- <div class="texto1">
-          <p> <strong>Airsoft Day</strong><br /> Evento das melhores equipes
+        <div class="texto1">
+    <!--       <p> <strong>Airsoft Day</strong><br /> Evento das melhores equipes
             em São Paulo,venha e se junte a nós nesta
             aventura. Será na região de Mogi das Cruzes no dia 01/10/2021 ás
             08h00 encontre uma equipe ou traga a sua.</p> -->
           <!-- <button type="submit" class="click1">
             <a href="#"> Clique aqui para participar desse evento</a>
           </button> -->
-<!--         </div>
-      </div> -->
+        </div>
+      </div>
 
       <div class="content-cards">
         <div class="card" *ngFor="let event of events">
@@ -23,13 +24,14 @@
             <h4><b>Evento</b></h4>
             <p> <b>Data:</b> {{event.dataEvento}}</p>
             <p> <b>Modalidade:</b> {{event.modalidade}}</p>
-<!--             <p> <b>Endereco:</b> {{event.endereco}}</p> -->
+           <!--  <p> <b>Endereco:</b> {{event.endereco}}</p> -->
             <p> <b>Descricao:</b> {{event.descricao}}</p>
           </div>
         </div>
       </div>
       </article>
   </section>
-
+  <!-- listagem dos produtos -->
+  <!-- end container produtos -->
 </main>
-
+<!-- end main -->

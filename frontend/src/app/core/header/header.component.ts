@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { SubscribeService } from './../../subscribe/subscribe.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  login = false;
+
+  constructor(
+    private subscribeService: SubscribeService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.subscribeService.watchToken().subscribe({
+      next: (v) => {
+        this.login = v;
+      }
+    })
+  }
+
+  exit() {
+    this.subscribeService.logout();
+    this.router.navigate(['index']);
   }
 
 }

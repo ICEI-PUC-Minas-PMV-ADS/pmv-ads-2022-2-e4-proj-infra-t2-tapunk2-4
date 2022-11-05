@@ -25,6 +25,8 @@ export class LoginService {
     );
   }
 
+
+
   private saveToken(data: Token): void {
     localStorage.setItem("token", JSON.stringify(data));
   }

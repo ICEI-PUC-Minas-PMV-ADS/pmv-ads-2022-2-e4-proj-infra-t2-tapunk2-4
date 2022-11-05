@@ -46,13 +46,22 @@
       "senha": "MtAUMg2Ji4"
     },
     {
-      "nome": "Rodrigo Charles",
-      "apelido": "rato",
-      "dataNasc": "1111-11-11",
+      "nome": "teste",
+      "apelido": "teste",
+      "dataNasc": "2022-11-02",
       "sexo": "Masculino",
       "email": "teste@teste.com",
-      "senha": "1234",
+      "senha": "teste",
       "id": 6
+    },
+    {
+      "nome": "Pessoa de Teste",
+      "apelido": "Teste",
+      "dataNasc": "2022-03-03",
+      "sexo": "Masculino",
+      "email": "teste2@teste.com",
+      "senha": "teste2",
+      "id": 7
     }
   ],
   "cadastroevento": [
@@ -81,17 +90,10 @@
       "descricao": "Descrição evento 04"
     },
     {
-      "dataEvento": "2023-01-01",
-      "endereco": "asd",
-      "modalidade": "DM",
+      "dataEvento": "2022-02-02",
+      "modalidade": "SK",
       "descricao": "Evento de teste",
       "id": 5
-    },
-    {
-      "dataEvento": "2023-01-01",
-      "modalidade": "DM",
-      "descricao": "Teste de evento 2",
-      "id": 6
     }
   ],
   "cadastroequipe": [
