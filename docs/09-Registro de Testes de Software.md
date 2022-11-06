@@ -1,6 +1,6 @@
 # Registro de Testes de Software
 
-##Os resultados obtidos nos testes de Software da segunda etapa estão descritos a seguir, foi utilizado o postaman para reproduzi-los.
+## Os resultados obtidos nos testes de Software da segunda etapa estão descritos a seguir, foi utilizado o postaman para reproduzi-los.
 
 ![RCT02](https://user-images.githubusercontent.com/82246327/196062227-59f60b5e-e580-4222-828a-ee6ee9649070.png)
 
@@ -10,7 +10,7 @@
 
 ![RCT05](https://user-images.githubusercontent.com/82246327/196062216-0f4c8ea9-7d32-4d2b-93cc-6bdb35f26c19.jpeg)
 
-##Os resultados obtidos nos testes de Software da terceira etapa estão descritos a seguir:
+## Os resultados obtidos nos testes de Software da terceira etapa estão descritos a seguir:
 
 ![image](https://user-images.githubusercontent.com/82246327/200198475-b13bc3ea-d02a-400e-a74f-06c6b67e2cdc.png)
 ![image](https://user-images.githubusercontent.com/82246327/200198558-e1c69329-06eb-4d9f-a667-1bff6553e5f1.png)
