@@ -71,6 +71,24 @@
       "email": "teste2@teste.com",
       "senha": "teste",
       "id": 8
+    },
+    {
+      "nome": "Pessoa de teste 2",
+      "apelido": "teste2",
+      "dataNasc": "1991-01-01",
+      "sexo": "Masculino",
+      "email": "teste3@teste.com",
+      "senha": "teste",
+      "id": 9
+    },
+    {
+      "nome": "Pessoa de teste 4",
+      "apelido": "Teste4",
+      "dataNasc": "01/01/2001",
+      "sexo": "Feminino",
+      "email": "teste4@teste.com",
+      "senha": "teste",
+      "id": 10
     }
   ],
   "cadastroevento": [

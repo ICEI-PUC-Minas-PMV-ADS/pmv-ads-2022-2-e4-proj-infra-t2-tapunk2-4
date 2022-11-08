@@ -9,7 +9,7 @@
           <figcaption class="figure-caption">Adicione sua imagem</figcaption>
            <input type="file" id="fileimage" />
         </figure> -->
-      <form [formGroup]="userForm" id="formulario" (ngSubmit)="create(userForm.value)">
+      <form [formGroup]="userForm" id="formulario" (ngSubmit)="create(userForm.getRawValue())">
         <fieldset id="dados">
           <p><label for="nome">Nome:</label><input formControlName="nome" type="text" name="tnome" id="nome" size="40" required></p>
           <p><label for="apelido">Apelido: </label><input formControlName="apelido" type="text" name="tapelido" id="apelido" size="39" required>

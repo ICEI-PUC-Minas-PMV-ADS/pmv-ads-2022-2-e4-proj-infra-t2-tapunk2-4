@@ -3,17 +3,20 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SubscribeService } from './subscribe.service';
 import { User } from './user.interface';
+import { DatePipe } from '@angular/common';
 
 @Component({
   templateUrl: './subscribe.component.html',
   styleUrls: ['./subscribe.component.scss'],
+  providers: [DatePipe]
 })
 export class SubscribeComponent implements OnInit {
   userForm: FormGroup;
   constructor(
     private fb: FormBuilder,
     private subscriveService: SubscribeService,
-    private router: Router
+    private router: Router,
+    private datePipe: DatePipe
   ) {}
 
   date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
@@ -31,6 +34,8 @@ export class SubscribeComponent implements OnInit {
   }
 
   create(user: User): void {
+    user.dataNasc = this.datePipe.transform(user.dataNasc, 'dd/MM/yyyy');
+
     this.subscriveService.addUser(user).subscribe({
       next: () => {
         alert("Cadastro realizado com sucesso!")
