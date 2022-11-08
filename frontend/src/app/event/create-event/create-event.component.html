@@ -5,7 +5,7 @@
       class="fotoevent img-fluid d-flex justify-content-center"> -->
     <div class="formulario">
       <form [formGroup]="formEvent" id="formulario"
-        (ngSubmit)="addEvent(formEvent.value)">
+        (ngSubmit)="addEvent(formEvent.getRawValue())">
         <fieldset id="dados">
           <p><label for="event">Data: </label><input type="date"
               formControlName="dataEvento" name="teven" id="event"></p>

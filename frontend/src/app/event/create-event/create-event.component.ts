@@ -2,11 +2,13 @@ import { EventService } from './../event.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Event } from '../event.interface';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-create-event',
   templateUrl: './create-event.component.html',
-  styleUrls: ['./create-event.component.scss']
+  styleUrls: ['./create-event.component.scss'],
+  providers: [DatePipe]
 })
 export class CreateEventComponent implements OnInit {
 
@@ -14,7 +16,8 @@ export class CreateEventComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private eventService: EventService
+    private eventService: EventService,
+    private datePipe: DatePipe 
   ) { }
 
   ngOnInit(): void {
@@ -27,6 +30,8 @@ export class CreateEventComponent implements OnInit {
   }
 
   addEvent(event: Event) {
+    event.dataEvento = this.datePipe.transform(event.dataEvento, 'dd/MM/yyyy');
+    
     this.eventService.addEvent(event).subscribe({
       next: () => {
         alert('Cadastro realizado com sucesso!');

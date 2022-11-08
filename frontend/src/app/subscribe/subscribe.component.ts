@@ -16,6 +16,9 @@ export class SubscribeComponent implements OnInit {
     private router: Router
   ) {}
 
+  date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+  dataNasc = this.date.toLocaleDateString()
+  
   ngOnInit(): void {
     this.userForm = this.fb.group({
       nome: ['', Validators.required],

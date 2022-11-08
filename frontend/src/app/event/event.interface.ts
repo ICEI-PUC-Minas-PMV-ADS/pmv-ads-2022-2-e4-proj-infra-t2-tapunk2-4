@@ -1,6 +1,6 @@
 export interface Event {
   id: number;
-  dataEvento: string;
+  dataEvento: string | null;
   endereco: string;
   modalidade: string;
   descricao: string;
