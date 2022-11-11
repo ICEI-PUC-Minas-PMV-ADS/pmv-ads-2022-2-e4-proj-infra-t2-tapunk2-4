@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  msEquipe: "http://localhost:3000",
-  msEvento: "http://localhost:3000",
-  msUsuario: "http://localhost:3000",
+  msEquipe: "http://localhost:8080/msequipe",
+  msEvento: "http://localhost:8080/msevento",
+  msUsuario: "http://localhost:8080/msusuario",
   msLogin: "http://localhost:3000"
 };
 
