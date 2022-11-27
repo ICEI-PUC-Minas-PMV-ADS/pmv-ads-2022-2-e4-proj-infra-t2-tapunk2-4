@@ -22,3 +22,15 @@
 ![image](https://user-images.githubusercontent.com/82246327/200198992-f5b4feb5-1edb-405f-93ed-46f3b03276dd.png)
 
 ![image](https://user-images.githubusercontent.com/82246327/200198694-8c84569e-ab38-48aa-9c9f-9a7277e0a12a.png)
+
+•	Os resultados obtidos nos testes de Software da quarta etapa estão descritos a seguir:
+
+![ImagemCT1](https://user-images.githubusercontent.com/70074475/204155010-a3d3a4b1-babb-4d0d-9853-9775ec8576a0.PNG)
+
+![ImagemCT2](https://user-images.githubusercontent.com/70074475/204154870-cd0add27-87cd-479f-8c42-989b8e8d6d28.png)
+
+![ImagemCT3](https://user-images.githubusercontent.com/70074475/204154829-f4673458-50c7-45d9-a487-dff7b6042882.png)
+
+![ImagemCT4](https://user-images.githubusercontent.com/70074475/204155077-b2abbfb3-3bea-420c-9871-bb6705c9abfc.png)
+
+![ImagemCT5](https://user-images.githubusercontent.com/70074475/204155054-6abfc3f8-cdd5-417b-ae57-1bab50a98bbb.png)
