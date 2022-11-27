@@ -25,12 +25,12 @@
 
 •	Os resultados obtidos nos testes de Software da quarta etapa estão descritos a seguir:
 
-![ImagemCT1](https://user-images.githubusercontent.com/70074475/204155010-a3d3a4b1-babb-4d0d-9853-9775ec8576a0.PNG)
+![ImagemCT1](https://user-images.githubusercontent.com/70074475/204156916-8144a3ba-5ac6-48d7-86bc-af785bd2d716.png)
 
-![ImagemCT2](https://user-images.githubusercontent.com/70074475/204154870-cd0add27-87cd-479f-8c42-989b8e8d6d28.png)
+![ImagemCT2](https://user-images.githubusercontent.com/70074475/204158080-681bda80-7668-4f36-92d7-34f66750e0ee.png)
 
-![ImagemCT3](https://user-images.githubusercontent.com/70074475/204154829-f4673458-50c7-45d9-a487-dff7b6042882.png)
+![ImagemCT3](https://user-images.githubusercontent.com/70074475/204156925-d2603ec8-0291-472b-a138-8f8f9eb42c4a.png)
 
-![ImagemCT4](https://user-images.githubusercontent.com/70074475/204155077-b2abbfb3-3bea-420c-9871-bb6705c9abfc.png)
+![ImagemCT4](https://user-images.githubusercontent.com/70074475/204156929-26938b92-792d-44a3-8676-566a2275accb.png)
 
-![ImagemCT5](https://user-images.githubusercontent.com/70074475/204155054-6abfc3f8-cdd5-417b-ae57-1bab50a98bbb.png)
+![ImagemCT5](https://user-images.githubusercontent.com/70074475/204156936-235838f0-8302-4e49-8c06-a6d856762d05.png)
