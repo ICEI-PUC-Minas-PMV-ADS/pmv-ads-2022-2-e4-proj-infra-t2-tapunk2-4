@@ -32,6 +32,7 @@ public class Jogador {
 	private String sexo;
 	@Email
 	private String email;
+	private String senha;
 	
 	@Override
 	public boolean equals(Object obj) {
@@ -44,11 +45,11 @@ public class Jogador {
 		Jogador other = (Jogador) obj;
 		return Objects.equals(apelido, other.apelido) && Objects.equals(dataNasc, other.dataNasc)
 				&& Objects.equals(email, other.email) && Objects.equals(nome, other.nome)
-				&& Objects.equals(sexo, other.sexo);
+				&& Objects.equals(sexo, other.sexo) && Objects.equals(senha, other.senha);
 	}
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(apelido, dataNasc, email, nome, sexo);
+		return Objects.hash(apelido, dataNasc, email, nome, sexo, senha);
 	} 
 }
