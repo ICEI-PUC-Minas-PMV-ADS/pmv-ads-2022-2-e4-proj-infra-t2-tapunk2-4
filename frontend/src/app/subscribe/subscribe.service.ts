@@ -9,14 +9,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class SubscribeService {
-  private readonly url: string = environment.msUsuario;
+  private readonly url: string = environment.baseUrl;
 
   private logger = new Subject<boolean>();
 
   constructor(private httpClient: HttpClient) {}
 
   addUser(user: User): Observable<any> {
-    return this.httpClient.post(`${this.url}/usuario`, user);
+    return this.httpClient.post(`${this.url}/msusuario/usuario`, user);
   }
 
   getUserByEmailAndPassword(email: string, password: string): Observable<User[]> {

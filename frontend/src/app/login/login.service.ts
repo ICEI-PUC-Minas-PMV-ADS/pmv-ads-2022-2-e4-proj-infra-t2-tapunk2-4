@@ -8,12 +8,12 @@ import { Token } from './token.interface';
   providedIn: 'root',
 })
 export class LoginService {
-  private readonly url: string = environment.msLogin;
+  private readonly url: string = environment.baseUrl;
 
   constructor(private httpClient: HttpClient) {}
 
   login(email: string, password: string): Observable<Token> {
-    return this.httpClient.post<Token>(`${this.url}/auth`, {
+    return this.httpClient.post<Token>(`${this.url}/mslogin/auth`, {
       email,
       senha: password,
     }).pipe(

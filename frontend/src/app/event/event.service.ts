@@ -9,17 +9,17 @@ import { Event } from './event.interface';
 })
 export class EventService {
 
-  private readonly url: string = environment.msEvento;
+  private readonly url: string = environment.baseUrl;
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
   getEvents(): Observable<Event[]> {
-    return this.httpClient.get<Event[]>(`${this.url}/cadastroevento`);
+    return this.httpClient.get<Event[]>(`${this.url}/msevento/cadastroevento`);
   }
 
   addEvent(event: Event): Observable<any> {
-    return this.httpClient.post(`${this.url}/cadastroevento`, event);
+    return this.httpClient.post(`${this.url}/msevento/cadastroevento`, event);
   }
 }

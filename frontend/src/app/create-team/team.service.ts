@@ -8,12 +8,12 @@ import { Team } from './team.interface';
   providedIn: 'root',
 })
 export class TeamService {
-  private readonly url = environment.msEquipe;
+  private readonly url = environment.baseUrl;
 
   constructor(private httpClient: HttpClient) {}
 
   getTeams(): Observable<Team[]> {
-    return this.httpClient.get<Team[]>(`${this.url}/cadastroequipe`);
+    return this.httpClient.get<Team[]>(`${this.url}/msequipe/cadastroequipe`);
   }
 
   addTeam(team: Team) {
