@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  msEquipe: "http://localhost:3000",
-  msEvento: "http://localhost:3000",
-  msUsuario: "http://localhost:3000",
-  msLogin: "http://localhost:3000",
+  msEquipe: "http://localhost:8082",
+  msEvento: "http://localhost:8082",
+  msUsuario: "http://localhost:8082",
+  msLogin: "http://localhost:8082",
   baseUrl: "/api"
 };
 
