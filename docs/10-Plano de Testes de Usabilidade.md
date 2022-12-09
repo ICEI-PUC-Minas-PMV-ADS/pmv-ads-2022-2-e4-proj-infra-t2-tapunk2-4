@@ -11,4 +11,4 @@ As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Test
 > - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
 
 
-![image](https://user-images.githubusercontent.com/82246327/206599461-0ff798da-85b3-468c-8172-0f63fda56e05.png)
+
