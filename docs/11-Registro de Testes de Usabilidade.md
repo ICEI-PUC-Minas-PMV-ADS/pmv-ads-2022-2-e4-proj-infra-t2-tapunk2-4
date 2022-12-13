@@ -2,22 +2,22 @@
 
 Os resultados obtidos nos testes de usabilidade realizados são descritos nas Tabelas a seguir.
 
-![1](https://user-images.githubusercontent.com/82287655/207200544-7cc5c734-09ad-4194-aa28-b8abb7b28d0f.jpg)
+![image](https://user-images.githubusercontent.com/82287655/207201394-dcfaf14c-a35b-4967-8289-af23c5b1ddbc.png)
 
-![2](https://user-images.githubusercontent.com/82287655/207200545-73cb07ee-7342-4c80-939a-41b21b0f295d.jpg)
+![image](https://user-images.githubusercontent.com/82287655/207201512-c32ad947-1814-4193-9cc5-2263a5c3eb5d.png)
 
-![3](https://user-images.githubusercontent.com/82287655/207200548-09652610-4c90-4a41-a29d-17cbb4821211.jpg)
+![image](https://user-images.githubusercontent.com/82287655/207201594-b0a0ff01-51eb-4b46-8114-25118808fe38.png)
 
-![4](https://user-images.githubusercontent.com/82287655/207200550-48b15239-85c6-4eeb-906e-b2a5434cd531.jpg)
+![image](https://user-images.githubusercontent.com/82287655/207201664-0824dc4a-771a-490d-8dfb-b190ad2b7cd6.png)
 
-![5](https://user-images.githubusercontent.com/82287655/207200535-f18a8a81-5640-4551-8f11-88bedd7aaaae.jpg)
+![image](https://user-images.githubusercontent.com/82287655/207201745-4c2ad565-4da0-4af2-9c29-486f75cf2ce4.png)
 
-![6](https://user-images.githubusercontent.com/82287655/207200537-543e59d3-2176-4d18-a747-f54548927ac8.jpg)
+![image](https://user-images.githubusercontent.com/82287655/207201828-7f5a9c67-6bc2-4c61-a587-b060560faab3.png)
 
-![7](https://user-images.githubusercontent.com/82287655/207200538-5e40b28c-db5f-4fc8-bdc9-2432b4720bf2.jpg)
+![image](https://user-images.githubusercontent.com/82287655/207201904-e12e6c0c-f673-49d5-8107-7d8e644a3d77.png)
 
-![8](https://user-images.githubusercontent.com/82287655/207200539-fb4fa77a-3243-40d5-a6fe-2d6ff8451d3d.jpg)
+![image](https://user-images.githubusercontent.com/82287655/207201967-670256a7-0d46-45ee-8797-89e907b86d38.png)
 
-![9](https://user-images.githubusercontent.com/82287655/207200540-cccdc4a7-bd8a-47c3-a9b6-59d78923f33c.jpg)
+![image](https://user-images.githubusercontent.com/82287655/207202047-67a609ab-818f-41d8-bc48-ea6c5005d621.png)
 
-![10](https://user-images.githubusercontent.com/82287655/207200543-67cc574b-bafe-486f-bee0-b19b842d7717.jpg)
+![image](https://user-images.githubusercontent.com/82287655/207202137-7b66cbb4-5ff7-496c-8810-9013db16f6fb.png)
