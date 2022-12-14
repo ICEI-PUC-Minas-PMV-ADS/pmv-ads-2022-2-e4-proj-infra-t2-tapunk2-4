@@ -19,4 +19,7 @@ As ferramentas empregadas para a organização e desenvolvimento do projeto foi 
 No decorrer do desenvolvimento foram realizadas mudanças no fluxo do usuário  para atender as necessidades do mobile, procurando melhorar a experiência do usuário.
 Melhorias futuras foram detectadas afim de melhorar a experiência do usuário, como por exemplo, gestão da equipe cadastrada.
 
-O objetivo do nosso é gerar uma plataforma para os praticantes de Airsoft possam de maneira rapida e fácil encontrar eventos pelo pais, buscando aquele que melhor atende suas expectativas. Com isso concluímos que somos facilitadores nesta busca organizada por eventos,afim de ajudar os praticantes do esporte.
+O objetivo do nosso é gerar uma plataforma para os praticantes de Airsoft possam de maneira rapida e fácil encontrar eventos pelo pais, buscando aquele que melhor atende suas expectativas. Com isso concluímos que somos facilitadores nesta busca organizada por eventos,
+afim de ajudar os praticantes do esporte.
+
+![image](https://user-images.githubusercontent.com/81598975/207483349-7f029e08-4017-4c8c-9724-6ac9d9dbea8b.png)
