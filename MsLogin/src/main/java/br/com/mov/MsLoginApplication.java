@@ -1,4 +1,4 @@
-package br.com.mov.security;
+package br.com.mov;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,16 +9,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @EnableEurekaClient
 @SpringBootApplication
-public class MsLogin1Application {
+public class MsLoginApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsLogin1Application.class, args);
+		SpringApplication.run(MsLoginApplication.class, args);
 	}
-	
+
 	@Bean
 	public PasswordEncoder getPasswordEncoder() {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		return encoder;
 	}
-
 }

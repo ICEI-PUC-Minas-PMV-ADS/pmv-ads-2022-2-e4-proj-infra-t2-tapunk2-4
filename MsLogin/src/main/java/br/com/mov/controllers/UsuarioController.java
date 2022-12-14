@@ -1,4 +1,4 @@
-package br.com.mov.security.controllers;
+package br.com.mov.controllers;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.mov.security.models.Usuario;
-import br.com.mov.security.repositories.UsuarioRepository;
+import br.com.mov.models.Usuario;
+import br.com.mov.repositories.UsuarioRepository;
 
 @RestController
 @RequestMapping("/usuario")

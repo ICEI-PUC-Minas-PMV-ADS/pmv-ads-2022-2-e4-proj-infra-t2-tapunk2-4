@@ -1,4 +1,4 @@
-package br.com.mov.security.security;
+package br.com.mov.security;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,11 +19,11 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import br.com.mov.security.data.DetalheUsuarioData;
-import br.com.mov.security.models.Usuario;
+import br.com.mov.data.DetalheUsuarioData;
+import br.com.mov.models.Usuario;
 
 /**
- * Responsavel por autenticar o usuário e gerar o token jwt
+ * Respon´savel por autenticar o usuário e gerar o token jwt
  */
 public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
 

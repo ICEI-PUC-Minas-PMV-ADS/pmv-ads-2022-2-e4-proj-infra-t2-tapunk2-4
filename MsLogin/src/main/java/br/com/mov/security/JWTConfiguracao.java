@@ -1,4 +1,4 @@
-package br.com.mov.security.security;
+package br.com.mov.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -12,7 +12,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import br.com.mov.security.services.DetalheUsuarioServiceImpl;
+import br.com.mov.services.DetalheUsuarioServiceImpl;
 
 @EnableWebSecurity
 public class JWTConfiguracao extends WebSecurityConfigurerAdapter{
@@ -33,7 +33,7 @@ public class JWTConfiguracao extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests()
-        .antMatchers(HttpMethod.GET, "/email").permitAll()
+        .antMatchers(HttpMethod.GET, "/login").permitAll()
         .antMatchers(HttpMethod.POST, "/usuario").permitAll()
         .anyRequest().authenticated()
         .and()

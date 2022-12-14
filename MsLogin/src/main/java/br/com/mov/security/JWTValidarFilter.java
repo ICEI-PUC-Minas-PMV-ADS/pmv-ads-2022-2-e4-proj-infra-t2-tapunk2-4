@@ -1,4 +1,4 @@
-package br.com.mov.security.security;
+package br.com.mov.security;
 
 import java.io.IOException;
 import java.util.ArrayList;

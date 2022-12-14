@@ -1,4 +1,4 @@
-package br.com.mov.security.models;
+package br.com.mov.models;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,7 +18,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
     private String login;
     private String password;
 }

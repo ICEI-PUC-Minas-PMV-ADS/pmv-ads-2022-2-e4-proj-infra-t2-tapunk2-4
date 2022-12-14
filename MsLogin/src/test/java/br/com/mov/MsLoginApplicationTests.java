@@ -1,10 +1,10 @@
-package br.com.mov.security;
+package br.com.mov;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MsLogin1ApplicationTests {
+class MsLoginApplicationTests {
 
 	@Test
 	void contextLoads() {

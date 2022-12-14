@@ -1,4 +1,4 @@
-package br.com.mov.security.services;
+package br.com.mov.services;
 
 import java.util.Optional;
 
@@ -7,9 +7,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import br.com.mov.security.data.DetalheUsuarioData;
-import br.com.mov.security.models.Usuario;
-import br.com.mov.security.repositories.UsuarioRepository;
+import br.com.mov.data.DetalheUsuarioData;
+import br.com.mov.models.Usuario;
+import br.com.mov.repositories.UsuarioRepository;
 
 /**
  * Serviço de consulta do usuário

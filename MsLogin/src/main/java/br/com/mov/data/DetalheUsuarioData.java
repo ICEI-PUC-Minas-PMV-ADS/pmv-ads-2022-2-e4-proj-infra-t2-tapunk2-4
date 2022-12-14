@@ -1,4 +1,4 @@
-package br.com.mov.security.data;
+package br.com.mov.data;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import br.com.mov.security.models.Usuario;
+import br.com.mov.models.Usuario;
 
 /**
  * Implementação dos dados do usuário com base na interfaço do spring security
