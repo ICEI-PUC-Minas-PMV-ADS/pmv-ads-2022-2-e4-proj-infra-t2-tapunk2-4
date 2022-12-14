@@ -5,7 +5,9 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
-  ScrollView, FlatList,
+  Button,
+  ScrollView,
+  FlatList,
 } from 'react-native';
 import { List } from 'react-native-paper';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
@@ -13,6 +15,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Animatable from 'react-native-animatable';
 import { getCadEvento } from '../services/eventoService';
+import Acesso from './Acesso';
 
 const ListaEventos = ({ route }) => {
   const navigation = useNavigation();
@@ -28,7 +31,7 @@ const ListaEventos = ({ route }) => {
   }, [isFocused]);
 
   const renderItem = ({ item }) => (
-    <List.Item   
+    <List.Item
       title={'Data: ' + item.dataEvento}
       text={'Modalidade: ' + item.modalidade}
       description={'Descrição: ' + item.descricao}
@@ -41,12 +44,14 @@ const ListaEventos = ({ route }) => {
           {item.data}{' '}
         </Text>
       )}
-
     />
   );
 
   return (
     <View style={styles.container}>
+
+    <Button title= "Voltar" onPress={()=>navigation.navigate ('Cadastro de Evento')}/>
+
       <Animatable.View
         animation="fadeInLeft"
         delay={500}
@@ -56,19 +61,19 @@ const ListaEventos = ({ route }) => {
 
       <ScrollView style={styles.scrollView}>
         <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-          <FlatList data={listarEventos} renderItem={renderItem} keyExtractor={(item) => item.id} />       
+          <FlatList
+            data={listarEventos}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id}
+          />
         </Animatable.View>
       </ScrollView>
-      <TouchableOpacity style={styles.buttonVoltar}>
-            <Text style={styles.buttonTextVoltar} onPress={()=>navigation.navigate('PaginaInicial')} > Voltar </Text>
-          </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-
-    container: {
+  container: {
     flex: 2,
     backgroundColor: '#f0870c',
     fontSize: 28,
@@ -78,12 +83,12 @@ const styles = StyleSheet.create({
     marginBottom: '8%',
     paddingStart: '5%',
   },
-   message: {
+  message: {
     fontSize: 30,
     fontWeight: 'bold',
     color: '#fff',
   },
-    containerForm: {
+  containerForm: {
     backgroundColor: '#fff',
     flex: 1,
     fontSize: 20,
@@ -96,21 +101,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#f0870c',
     marginHorizontal: 10,
   },
-  buttonVoltar: {
-    backgroundColor: '#fff',
-    width: '100%',
-    borderRadius: 4,
-    paddingVertical: 8,
-    marginTop: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  buttonTextVoltar: {
-    color: 'f0870c',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
 });
 
 export default ListaEventos;
-

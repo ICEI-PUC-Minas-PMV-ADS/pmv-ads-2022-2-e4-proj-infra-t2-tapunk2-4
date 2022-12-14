@@ -6,9 +6,11 @@ import {
   ScrollView,
   SafeAreaView,
   Image,
+  Button,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import Constants from 'expo-constants';
+//import Acesso from './Acesso';
 
 import Container from '../componentes/Container';
 import Input from '../componentes/Input';

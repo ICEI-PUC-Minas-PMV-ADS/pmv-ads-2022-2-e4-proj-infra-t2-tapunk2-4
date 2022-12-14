@@ -7,7 +7,7 @@ const Input = ({ children }) => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 70,
+    fontSize: 90,
   },
 });
 

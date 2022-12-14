@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  Button,
   ScrollView,
   Alert,
 } from 'react-native';
@@ -40,7 +41,7 @@ const CadEventos = ({ route }) => {
       navigation.goBack();
 
       if (res) {
-        Alert.alert('Atenção', 'Evento cadastrado com sucesso!', [
+        Alert.alert('Parabéns!', 'Evento cadastrado com sucesso!', [
           { test: 'OK', onPress: () => navigation.goBack() },
         ]);
       } else {
@@ -143,7 +144,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     height: 30,
     marginBottom: 12,
-    fontSize: 10,
+    fontSize: 25,
   },
   buttonCadastrar: {
     backgroundColor: '#f0870c',

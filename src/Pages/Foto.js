@@ -9,36 +9,25 @@ import {
   StatusBar,
   ScrollView,
   SafeAreaView,
+  Button
 } from 'react-native';
 
 export default function Foto({ navigation }) {
   const [scrollY, setScrollY] = useState(new Animated.Value(0));
   return (
     <SafeAreaView style={styles.container}>
-      <Animated.View
-        style={[
-          styles.header,
-          {
-            height: scrollY.interpolate({
-              inputRange: [5, 160, 180],
-              outputRange: [140, 20, 0],
-              extrapolate: 'clamp',
-            }),
-            opacity: scrollY.interpolate({
-              inputRange: [1, 75, 170],
-              outputRange: [1, 1, 0],
-              extrapolate: 'clamp',
-            }),
-          },
-        ]}>
-        <Image
-          source={require('../assents/foto1.jpeg')}
-          style={styles.imageheader}
-        />
+
+     <Button
+        title="Voltar"
+        backgroundColor="#f0870c"
+        onPress={() => navigation.navigate('Login')}
+      />
+
+      <Animated.View>
         <Text style={styles.text}>
           Aqui você pode acompanhar as imagens dos ultimos eventos.
         </Text>
-      </Animated.View>
+       </Animated.View>
       <ScrollView
         scrollEventThrottle={15}
         onScroll={Animated.event(
@@ -79,12 +68,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#f0870c',
   },
-  imageheader: {
-    width: 350,
-    height: 80,
-    alignItems: 'center',
-  },
-  header: {},
 
   image: {
     width: '100%',
@@ -94,9 +77,8 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    //fontFamily: 'Anton_400Regular',
-    fontSize: 20,
-    marginHorizontal: '1%',
+    fontSize: 25,
+    marginHorizontal: '5%',
     textAlign: 'center',
   },
 });

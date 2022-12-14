@@ -1,89 +1,91 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Animatable from 'react-native-animatable';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Acesso from './Acesso';
 
-import {useUser} from '../Contexts/UserContext';
+import { useUser } from '../Contexts/UserContext';
 
 import { login } from '../services/authService';
 
 export default function Login() {
-
-
-const navigation = useNavigation();
- // const {setSigned, setName} = useUser();
-
+  const navigation = useNavigation();
+  //const { setSigned, setNome } = useUser();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = ( ) => {
+  const handleLogin = () => {
     login({
       email: email,
       password: password
-    }).then( res => {
+    }).then((res) => {
       console.log(res)
-      navigation.navigate('Sobre');
+      navigation.navigate('Cadastro de Equipe');
 
-     /* if(res && res.user){
-      setSigned(true);
-      setName(res.user.name);
-       AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
-     
-      }else{
+      /*if (res) {
+        setSigned(true);
+        setNome(res.user.nome);
+        AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
+      } else {
         Alert.alert('Atenção', 'Usuário ou senha inválidos!');
       }*/
     });
-  }
+  };
 
- return (
+  return (
     <View style={styles.container}>
       <Animatable.View
-        animation="fadeInLeft"
-        delay={500}
-        style={styles.containerHeader}>
-        <Text style={styles.message}> Bem-vindo(a) </Text>
-      </Animatable.View>
+          animation="fadeInLeft"
+          delay={500}
+          style={styles.containerHeader}>
+          <Text style={styles.message}> Bem-vindo(a) </Text>
+        </Animatable.View>
 
-      <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-        <Text style={styles.title}> Email</Text>
-        <TextInput
-          placeholder="Digite seu email..."
-          style={styles.input}
-          value={email}
-          onChangeText={(text) => setEmail(text)}
-          keyboardType="email-address"
-        />
+        <Animatable.View animation="fadeInUp" style={styles.containerForm}>
+          <Text style={styles.title}> Email</Text>
+          <TextInput
+            placeholder="Digite seu email..."
+            style={styles.input}
+            value={email}
+            onChangeText={(text) => setEmail(text)}
+            keyboardType="email-address"
+          />
 
-        <Text style={styles.title}> Senha </Text>
-        <TextInput
-          placeholder="Digite sua senha..."
-          style={styles.input}
-          value={password}
-          onChangeText={(text) => setPassword(text)}
-          keyboardType="numeric"
-        />
+          <Text style={styles.title}> Senha </Text>
+          <TextInput
+            placeholder="Digite sua senha..."
+            style={styles.input}
+            value={password}
+            secureTextEntry
+            onChangeText={(text) => setPassword(text)}
+            keyboardType="numeric"
+          />
 
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText} onPress={handleLogin} >Acessar</Text>
-        </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}  onPress={handleLogin}>
+              Acessar
+            </Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.buttonRegisto}
-          onPress={() => navigation.navigate('Cadastro')}>
-          <Text style={styles.registroText}>
-            Não possui uma conta? Cadastre-se
-          </Text>
-        </TouchableOpacity>
-      </Animatable.View>
+          <TouchableOpacity
+            style={styles.buttonRegistro}
+            onPress={() => navigation.navigate('Registro')}>
+            <Text style={styles.registroText}>
+              Não possui uma conta? Cadastre-se
+            </Text>
+          </TouchableOpacity>
+        </Animatable.View>
     </View>
   );
 }
@@ -117,9 +119,9 @@ const styles = StyleSheet.create({
   },
   input: {
     borderBottomWidth: 1,
-    height: 40,
+    height: 50,
     marginBottom: 12,
-    fontSize: 16,
+    fontSize: 25,
   },
   button: {
     backgroundColor: '#f0870c',
@@ -135,7 +137,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-  buttonRegisto: {
+  buttonRegistro: {
     marginTop: 14,
     alignSelf: 'center',
   },

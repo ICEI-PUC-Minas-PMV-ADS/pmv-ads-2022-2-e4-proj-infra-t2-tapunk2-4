@@ -1,17 +1,16 @@
-import * as React from 'react';
+/*import * as React from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
+import { NavigationContainer } from '@react-navigation/native';
 import Login from './Login';
 import Register from './Register';
 import ListaEventos from './ListaEventos';
 import Fotos from './Foto';
 import Sobre from './Sobre';
-import CadEventos from './CadEventos';
-import CadEquipe from './CadEquipe';
 
-const PaginaInicial = () => {
+
+const Acesso = () => {
   const [index, setIndex] = React.useState(0);
-  const [routes] = React.useState([    
-
+  const [routes] = React.useState([
     {
       key: 'login',
       title: 'Login',
@@ -24,21 +23,6 @@ const PaginaInicial = () => {
       title: 'Register',
       icon: 'account-box',
       unfocusedIcon: 'account',
-      color: '#f0870c',
-    },
-    
-    {
-      key: 'cadEquipe',
-      title: 'Cadastro de Equipe',
-      icon: 'account-group',
-      unfocusedIcon: 'account-group',
-      color: '#f0870c',
-    },
-    {
-      key: 'cadEventos',
-      title: 'Cadastro de Eventos',
-      icon: 'account-switch-outline',
-      unfocusedIcon: 'clipboard-list',
       color: '#f0870c',
     },
     {
@@ -66,13 +50,11 @@ const PaginaInicial = () => {
 
   const renderScene = BottomNavigation.SceneMap({
     login: Login,
-    register: Register,    
-    cadEquipe: CadEquipe,
-    cadEventos: CadEventos,
+    register: Register,
     listaEventos: ListaEventos,
     fotos: Fotos,
     sobre: Sobre,
-  });
+    });
 
   return (
     <BottomNavigation
@@ -83,4 +65,5 @@ const PaginaInicial = () => {
   );
 };
 
-export default PaginaInicial;
+export default Acesso;
+*/

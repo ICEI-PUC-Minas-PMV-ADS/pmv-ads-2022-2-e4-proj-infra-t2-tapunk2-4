@@ -4,15 +4,15 @@ export const UserContext = createContext();
 
 export default function UserProvider({ children }) {
   const [signed, setSigned] = useState(false);
-  const [nomeJogador, setNomeJogador] = useState('');
+  const [nome, setNome] = useState('');
 
   return (
     <UserContext.Provider
       value={{
         signed,
         setSigned,
-        nomeJogador,
-        setNomeJogador
+        nome,
+        setNome
       }}>
       {children}
     </UserContext.Provider>

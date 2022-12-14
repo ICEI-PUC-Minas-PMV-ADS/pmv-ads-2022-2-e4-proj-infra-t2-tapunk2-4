@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-//import { Button } from 'react-native-paper';
-//import { useNavigation } from '@react-navigation/native';
-//import { NavigationContainer } from '@react-navigation/native';
-//import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Animatable from 'react-native-animatable';
-
 import Container from '../componentes/Container';
 import Body from '../componentes/body'
 
