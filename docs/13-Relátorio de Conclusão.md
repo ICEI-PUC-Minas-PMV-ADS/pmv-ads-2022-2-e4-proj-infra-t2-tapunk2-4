@@ -3,7 +3,7 @@
 O projeto possui uma identidade moderna, acessível, padronizada para que o usuário intuitivamente navegue entre as telas, seguindo a proposta dos frameworks. Sendo possível causar ao usuário uma experiência rápida e agradável enquanto exerce seus objetivos.
 
 O design moderno e centralizado permite que o usuário acesse a plataforma com confiança e sem dificuldade, as tecnologias envolvidas no projeto são: 
-A linguagem de programação Javascript, Typescript e os frameworks React-Native e Angular para o frontend.O back-end, foi utilizado a arquitetura de microserviços desenvolvido em Java.
+A linguagem de programação Javascript, Typescript e os frameworks React-Native e Angular para o frontend.O backend, foi utilizado a arquitetura de microserviços desenvolvido em Java.
 Também utilizamos o Docker para a subida dos microserviços.
 
 Os testes foram realizados através do Expo.dev, Visual Studio Code e Postman.
