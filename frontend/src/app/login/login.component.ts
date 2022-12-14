@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     /*
       Inicio trecho de codigo deve ser removido para para intergar com ms
     */
-    this.subscribeService
+   /* this.subscribeService
       .getUserByEmailAndPassword(
         this.form.get('email')?.value,
         this.form.get('password')?.value
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
         },
       });
 
-    return;
+    return;*/
     /*
       Fim trecho de codigo deve ser removido para para intergar com ms
     */
@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
       this.loginService
         .login(this.form.get('email')?.value, this.form.get('password')?.value)
         .subscribe({
-          next: () => this.router.navigate(['home']),
+          next: () => this.router.navigate(['index']),
           error: () => alert('Senha ou usuário inválido'),
         });
     }

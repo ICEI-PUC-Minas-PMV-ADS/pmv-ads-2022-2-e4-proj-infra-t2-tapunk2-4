@@ -17,6 +17,6 @@ export class TeamService {
   }
 
   addTeam(team: Team) {
-    return this.httpClient.post(`${this.url}/cadastroequipe`, team);
+    return this.httpClient.post(`${this.url}/msequipe/cadastroequipe`, team);
   }
 }

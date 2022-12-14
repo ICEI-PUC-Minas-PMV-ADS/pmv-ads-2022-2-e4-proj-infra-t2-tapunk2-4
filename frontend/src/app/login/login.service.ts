@@ -12,10 +12,10 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient) {}
 
-  login(email: string, password: string): Observable<Token> {
-    return this.httpClient.post<Token>(`${this.url}/mslogin/auth`, {
-      email,
-      senha: password,
+  login(login: string, password: string): Observable<Token> {
+    return this.httpClient.post<Token>(`${this.url}/mslogin/usuario`, {
+      login,
+      password: password,
     }).pipe(
       tap(
         {
