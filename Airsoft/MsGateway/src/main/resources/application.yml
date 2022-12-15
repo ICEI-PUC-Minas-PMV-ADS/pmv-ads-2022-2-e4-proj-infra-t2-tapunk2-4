@@ -1,7 +1,8 @@
-server.port=8080
+server.port=8082
 
 spring.cloud.gateway.discovery.locator.enabled=true
 spring.cloud.gateway.discovery.locator.lower-case-service-id=true
 
 spring.application.name=msgateway
 eureka.client.serviceUrl.defaultZone=http://localhost:9090/eureka
+eureka.instance.instance-id=${spring.application.name}:${random.int}
